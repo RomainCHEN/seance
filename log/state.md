@@ -97,3 +97,10 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   且前台被 **网易UU远程（Windows 远程桌面）** 占据，`screencapture` 截到的是远程桌面画面，
   不是 Brave。→ GUI 截图前必须先 `osascript activate Brave`，并且不要在用户用远程桌面时抢前台。
 - Devpost 是否已登录：**未确认**（页面内容节点为空，无法读取）。
+
+## 2026-11-01 22:42 用户决定
+- **积分归属账号：nov1@z-chen.dev**（浏览器里的新 Kiro 账号），User ID 见 log/private.md。
+- **清理计划分两阶段**：
+  1. 今天：清临时垃圾（.npm-cache 220MB、.pages-build、log/*.png、:5199 预览服务）——已完成；
+  2. 积分到账后：关掉线上部署（GitHub Pages + gh-pages），再决定是否连仓库一起删。
+  详见 docs/CLEANUP.md。删任何东西之前必须先把所有 URL 落进 SUBMITTED.md。
