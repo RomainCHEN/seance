@@ -13,6 +13,7 @@ the same transcript — which makes multi-agent flows testable in CI and demoabl
 API key.
 
 **Live demo:** <https://romain.is-a.dev/seance/> — no login, no key, no network calls.
+**Demo video (1:30, public):** <https://youtu.be/JEslV2u7YSw>
 
 - **Code Séance** — three reviewers read a diff and return a merge verdict.
 - **Postmortem Séance** — a detective, a blast analyst and a process ghost read an incident
@@ -20,6 +21,8 @@ API key.
 
 Both apps are produced from `template/` without touching the engine. That is the Skeleton Crew
 claim: lean enough to read in one sitting, flexible enough to carry two different products.
+
+[![Watch the demo](https://img.youtube.com/vi/JEslV2u7YSw/hqdefault.jpg)](https://youtu.be/JEslV2u7YSw)
 
 ![Landing page](./docs/images/landing.png)
 
