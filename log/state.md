@@ -147,3 +147,11 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 我已把要填的全部内容整理成可直接粘贴的包：`docs/DEVPOST-PASTE-PACK.md`
   （项目名、tagline、built-with、两条链接、故事全文、类别、附加奖、缩略图路径）。
 - 缩略图：`docs/images/thumbnail-3x2.png`（1500×1000，3:2）。
+
+## 2026-11-02 00:0x 视频已发布
+- YouTube 公开视频：**https://youtu.be/JEslV2u7YSw**（1:30，频道 Romain Chen）
+- 验证方式：`oembed` 返回 200 + 标题；Studio 里可见 "公开"
+  （注意 ID 是 `JEsl`（小写 L），不是 `JEsi`，差点记错）
+- 上传脚本：scripts/youtube-upload.mjs（文件输入 → 标题/描述 → 非儿童内容 → 公开 → 发布）
+- Devpost `Start project` 仍是 reCAPTCHA 拦截：JS 点击和**可信鼠标点击**都试过，页面不跳转。
+  → 建项目/提交必须由用户在浏览器里手动点（H2）。
