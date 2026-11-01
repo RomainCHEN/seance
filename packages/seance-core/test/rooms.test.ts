@@ -43,6 +43,31 @@ describe('shipped rooms', () => {
     expect(transcript.verdict.score).toBeLessThanOrEqual(100);
   });
 
+  it.each(ROOMS)('%s scores through its own scoring.yaml (Kiro review R7)', (relative) => {
+    const scoringPath = join(ROOT, relative, 'scoring.yaml');
+    expect(existsSync(scoringPath)).toBe(true);
+    const scoring = parse(readFileSync(scoringPath, 'utf8')) as {
+      weights?: Record<string, number>;
+      capacityPerPersona?: number;
+    };
+    expect(scoring.weights).toBeDefined();
+    expect(scoring.weights?.['risk']).toBeGreaterThan(0);
+    expect(scoring.capacityPerPersona).toBeGreaterThan(0);
+
+    const room = loadRoom(relative);
+    const transcript = runRoom({
+      artifactLabel: 'fixture.txt',
+      artifact: 'TODO: someone broke this, revenue is down, users are angry.',
+      personas: room.personas,
+      seed: 3,
+      scoring: {
+        weights: scoring.weights as { info: number; warn: number; risk: number },
+        capacityPerPersona: scoring.capacityPerPersona ?? 30,
+      },
+    });
+    expect(transcript.verdict.score).toBeGreaterThanOrEqual(0);
+  });
+
   it.each(ROOMS)('%s assigns every persona a unique turn order', (relative) => {
     const { personas } = loadRoom(relative);
     const ids = personas.map((persona) => persona.id);

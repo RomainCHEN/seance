@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
@@ -16,11 +20,18 @@
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
-    "types": ["vitest/globals"],
+    "types": [
+      "vitest/globals",
+      "node"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@seance/core": ["packages/seance-core/src/index.ts"],
-      "@seance/ui": ["packages/seance-ui/src/index.ts"]
+      "@seance/core": [
+        "packages/seance-core/src/index.ts"
+      ],
+      "@seance/ui": [
+        "packages/seance-ui/src/index.ts"
+      ]
     }
   },
   "include": [

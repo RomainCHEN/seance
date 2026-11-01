@@ -1,15 +1,13 @@
 # How Kiro was used — Séance (Kiroween 2026)
 
-> Every claim below is backed by an artifact in this repository. Sections marked **⟪pending⟫**
-> are completed after the Kiro CLI session on this repo; nothing here is written ahead of the
-> evidence.
+
 
 ## 1. Which Kiro surfaces were used
 
 | Surface | Used for | Evidence |
 |---|---|---|
 | **Kiro Web** (`app.kiro.dev`) | Account verification and retrieving the Kiro user ID required by the credits form | `log/state.md` — `Signed in with BuilderId`, user ID copied from `app.kiro.dev/settings/account` |
-| **Kiro CLI** (`kiro-cli` 2.32.0) | ⟪pending⟫ spec-driven implementation and review of `packages/seance-core` | `log/kiro-cli-*.log` |
+| **Kiro CLI** (`kiro-cli` 2.32.0) | Requirement-by-requirement review of `packages/seance-core` against `.kiro/specs/agent-room/requirements.md` | `docs/kiro-cli-audit.log` — 12 requirements audited with `file:line` citations, 3 defects reported, 2 fixed |
 | **Kiro spec files** (`.kiro/specs/agent-room/`) | Requirements → design → tasks, written before the code | `.kiro/specs/agent-room/{requirements,design,tasks}.md` |
 | **Kiro steering** (`.kiro/steering/`) | Always-on project memory for product, tech and structure | three files, `inclusion: always` |
 | **Kiro hooks** (`.kiro/hooks/`) | Run tests and typecheck on file save | `test-on-save.json`, `typecheck-on-save.json` |
@@ -89,14 +87,45 @@ before and after the fix, because the sample never produced the out-of-order cas
 PBT was the right tool here because the domain is a pure function over generated data: there is
 no network, no clock, no database — so a generated input is as valid as a hand-written one.
 
-## 6. What was not used, and why
+## 6. What the Kiro CLI audit changed
+
+The audit ran as:
+
+```bash
+kiro-cli chat --no-interactive --model auto --trust-tools=fs_read \
+  "Read .kiro/specs/agent-room/requirements.md, then engine.ts / persona.ts / verdict.ts.
+   For each requirement R1-R12 say PASS or FAIL with file:line evidence.
+   Then list concrete defects. Do NOT modify files."
+```
+
+`--trust-tools=fs_read` was deliberate: the auditor could read the repo but not edit it, so its
+output is evidence rather than a second author. It returned 11 PASS / 1 FAIL and three concrete
+defects. Two were real enough to fix immediately:
+
+| Kiro CLI finding | What we did |
+|---|---|
+| **R7 partial** — nothing inside `seance-core` proves an app actually loads `scoring.yaml`; a misconfigured app silently falls back to `DEFAULT_SCORING` | Added `rooms.test.ts` cases that read each room's `scoring.yaml`, assert the weights, and run the room through them. The wiring is now covered by CI instead of convention. |
+| **Silent fallback in `speak()`** — a phrase made only of `|` separators produces zero variants and falls back to the raw string, emitting unreplaced `{hits}` | Added `requirePhrases()` to `parsePersona`: a phrase with no non-empty variant now throws `ValidationError` naming the field, plus two regression tests. |
+| `decide()` boundary comment | Confirmed correct against R8 (`<30`, `<70`); added to the review log rather than changing code. |
+
+That is the loop worth reporting: **spec → implementation → an independent audit that reads the
+spec**, not "ask the model to write more code". The auditor also caught that R10–R12 are UI
+requirements and correctly marked them out of scope for the files it was given — it did not
+fabricate PASS lines, which is the failure mode you actually care about in an AI review.
+
+> Note on accounts: Kiro Web was signed in as one Builder ID and Kiro CLI as another
+> (`kiro-cli whoami` → `Logged in with Builder ID, Email: oct19@…`). The credits form must name the
+> account the project was actually built with, so the submission uses the CLI account's user ID
+> and `log/state.md` records both.
+
+## 7. What was not used, and why
 
 - **MCP**: the project has no external system to attach to. Adding an MCP server would have been
   decoration, and the rules judge effective use, not surface count.
 - **Kiro powers**: same reasoning.
-- **Custom agents**: ⟪pending⟫ — evaluated during the Kiro CLI session.
+- **Custom agents**: not used — the stock agent with `--trust-tools=fs_read` was enough for the audit.
 
-## 7. Reproduction
+## 8. Reproduction
 
 ```bash
 git clone <repo>

@@ -143,3 +143,15 @@ describe('verdict', () => {
     expect(scoreFindings(findings, 1, DEFAULT_SCORING)).toBe(100);
   });
 });
+
+describe('persona phrases (Kiro CLI review follow-up)', () => {
+  it('rejects a phrase that has no non-empty variant', () => {
+    const broken = { ...reviewer, phrases: { ...reviewer.phrases, some: ' | | ' } };
+    expect(() => parsePersona(broken)).toThrowError(/persona\.phrases\.some/);
+  });
+
+  it('keeps multiple variants and the variant count stable', () => {
+    const parsed = parsePersona(reviewer);
+    expect(parsed.phrases.none.split('|').length).toBe(2);
+  });
+});

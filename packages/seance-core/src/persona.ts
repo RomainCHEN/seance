@@ -14,6 +14,22 @@ function requireString(source: Record<string, unknown>, field: string, where: st
   return value;
 }
 
+/**
+ * A phrase entry must contain at least one non-empty variant after splitting on "|".
+ * Otherwise `speak()` would silently fall back to a raw, unreplaced string.
+ */
+function requirePhrases(source: Record<string, unknown>, field: string, where: string): string {
+  const value = requireString(source, field, where);
+  const variants = value
+    .split('|')
+    .map((variant) => variant.trim())
+    .filter((variant) => variant !== '');
+  if (variants.length === 0) {
+    throw new ValidationError(`${where}.${field}`, 'needs at least one non-empty variant');
+  }
+  return value;
+}
+
 function parseLens(raw: unknown, index: number, personaId: string): Lens {
   const where = `persona(${personaId}).lenses[${index}]`;
   if (!isRecord(raw)) throw new ValidationError(where, 'expected an object');
@@ -71,9 +87,9 @@ export function parsePersona(raw: unknown): Persona {
     voice: requireString(raw, 'voice', 'persona'),
     lenses: lenses.map((lens, index) => parseLens(lens, index, id)),
     phrases: {
-      none: requireString(phrases, 'none', 'persona.phrases'),
-      some: requireString(phrases, 'some', 'persona.phrases'),
-      many: requireString(phrases, 'many', 'persona.phrases'),
+      none: requirePhrases(phrases, 'none', 'persona.phrases'),
+      some: requirePhrases(phrases, 'some', 'persona.phrases'),
+      many: requirePhrases(phrases, 'many', 'persona.phrases'),
     },
   };
 
