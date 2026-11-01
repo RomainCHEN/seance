@@ -4,7 +4,7 @@
 `PENDING` with the reason. This file becomes the final deliverable once the Devpost form is
 submitted.
 
-Last updated: 2026-11-02 00:01 (Asia/Shanghai)
+Last updated: 2026-11-02 00:15 (Asia/Shanghai)
 
 ## Project
 
@@ -34,7 +34,7 @@ Last updated: 2026-11-02 00:01 (Asia/Shanghai)
 | d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
 | d10 | Blog URL | **PENDING** — platform chosen (dev.to); waiting for the user to log in, then the bot publishes | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
 | d11 | Social post URL | **PENDING** — account not confirmed (@Zaam1035028 vs @ProfJieDing) | [docs/SOCIAL_DRAFT.md](docs/SOCIAL_DRAFT.md) | — |
-| d12 | Devpost submission URL | **PENDING** — only reCAPTCHA on *Start project* blocks it (human click); all field values + the video URL are in the paste pack | [paste pack](docs/DEVPOST-PASTE-PACK.md) | — |
+| d12 | Devpost submission URL | **DRAFT READY 4/5** — project created, every field filled; only the final `Submit project` click (and the two bonus URLs) remain | [draft](https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions/1277374-seance/finalization) · [project](https://devpost.com/software/seance-0beln7) | 00:15 |
 | d13 | Step log | ✅ | [log/steps.md](log/steps.md) | 22:2x |
 | d14 | This file | ✅ (live) | `SUBMITTED.md` | — |
 
@@ -60,4 +60,4 @@ Last updated: 2026-11-02 00:01 (Asia/Shanghai)
 | Didit identity verification (ID + face) | **user** only — starts when the code email arrives | d4 |
 | Record + upload the video | **user** decides; bot can generate one from the page itself | d8 |
 | Choose blog platform (dev.to/Hashnode are logged out) + confirm X handle | **user** | d10, d11 |
-| Click the reCAPTCHA on *Start project* | **user** | d12 |
+| Click `Submit project` on the final step (bot prepared the whole draft) | **user** | d12 |

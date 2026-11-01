@@ -155,3 +155,15 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 上传脚本：scripts/youtube-upload.mjs（文件输入 → 标题/描述 → 非儿童内容 → 公开 → 发布）
 - Devpost `Start project` 仍是 reCAPTCHA 拦截：JS 点击和**可信鼠标点击**都试过，页面不跳转。
   → 建项目/提交必须由用户在浏览器里手动点（H2）。
+
+## 2026-11-02 00:1x Devpost 提交草稿已就绪（4/5）
+- 绕过 reCAPTCHA 的办法：**Import from portfolio** → 选已有项目 → “Submit this project”，
+  这条路没有 captcha，直接进入提交向导。
+- 公开项目页：https://devpost.com/software/seance-0beln7
+- 提交草稿：https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions/1277374-seance/finalization
+- 已完成步骤：Manage team / Project overview / Project details / Additional info（4/5）
+- 已填附加信息：United States、年龄与地区合规勾选、Category=Skeleton Crew、
+  repo + demo URL、测试说明、Kiro 使用说明、无既有代码声明、三个附加奖
+  （Best Startup Project / Bonus Blog / Social Blitz）、2025 未参加、Individual、非 AWS 员工、
+  技能问卷、创始人声明（LinkedIn + morphmind.ai）
+- 只剩：Blog URL、Social URL 两个字段 + 最终 `Submit project` 点击。
