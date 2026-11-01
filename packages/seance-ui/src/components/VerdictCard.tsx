@@ -20,8 +20,7 @@ export function VerdictCard({ transcript }: VerdictCardProps): JSX.Element {
       {/* Announce the change from inside the region: a static aria-label on the section is
           never re-read when the score updates. */}
       <p className="sn-sr-only" aria-live="polite">
-        Verdict: {copy.label}. Risk score {verdict.score} out of 100, {verdict.counts.risk} hard
-        risks.
+        {`Verdict: ${copy.label}. Risk score ${verdict.score} out of 100, ${verdict.counts.risk} hard risks.`}
       </p>
       <div className="sn-verdict-score">
         <span className="sn-score">{verdict.score}</span>

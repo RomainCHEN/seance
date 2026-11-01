@@ -2,7 +2,8 @@
 
 **A skeleton template for deterministic multi-agent rooms — and two apps built from it.**
 
-[![tests](https://img.shields.io/badge/tests-38%20passing-brightgreen)](#tests)
+[![tests](https://img.shields.io/badge/tests-42%20passing-brightgreen)](#tests)
+[![demo](https://img.shields.io/badge/demo-romain.is--a.dev%2Fseance-2ea44f)](https://romain.is-a.dev/seance/)
 [![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
 Séance is an open-source foundation for the part of multi-agent products nobody wants to
@@ -10,6 +11,8 @@ rebuild: **personas as data**, a **pure seeded engine** that turns an artifact i
 and a **reusable room UI**. Because the engine is pure, the same artifact and seed always produce
 the same transcript — which makes multi-agent flows testable in CI and demoable without an
 API key.
+
+**Live demo:** <https://romain.is-a.dev/seance/> — no login, no key, no network calls.
 
 - **Code Séance** — three reviewers read a diff and return a merge verdict.
 - **Postmortem Séance** — a detective, a blast analyst and a process ghost read an incident
@@ -45,7 +48,7 @@ The payoff is a demo anyone can reproduce: **no key, no network, no tokens, same
 
 ```bash
 npm install
-npm test          # 38 unit + property tests
+npm test          # 42 unit + property tests
 npm run build     # builds both apps and the landing page into dist/
 npm run dev:code  # http://localhost:5173 — Code Séance
 ```
@@ -130,7 +133,7 @@ that score to `ship | revise | block` with fixed thresholds (30 / 70).
 
 ## Tests
 
-38 tests, including ten property-based invariants run through `fast-check`:
+42 tests, including ten property-based invariants run through `fast-check`:
 
 | Property | Statement |
 |---|---|
@@ -165,3 +168,5 @@ artifacts are in [`.kiro/`](./.kiro):
 MIT — see [LICENSE](./LICENSE).
 
 Built for the [Kiroween 2026](https://kiroween.devpost.com/) hackathon, **Skeleton Crew** category.
+
+Deployed site: <https://romain.is-a.dev/seance/> · Source: <https://github.com/RomainCHEN/seance>
