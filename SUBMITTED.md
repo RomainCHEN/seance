@@ -3,7 +3,7 @@
 **State: SUBMITTED.** Séance is entered in Kiroween 2026 (see Devpost “My projects → SUBMITTED”).
 Remaining rows are bonus prizes or the credit redemption, each marked with the reason.
 
-Last updated: 2026-11-02 00:34 (Asia/Shanghai)
+Last updated: 2026-11-02 00:45 (Asia/Shanghai)
 
 ## Project
 
@@ -25,7 +25,7 @@ Last updated: 2026-11-02 00:34 (Asia/Shanghai)
 | d1 | Devpost registration | ✅ registered ("Thanks for registering!") | <https://devpost.com/RomainCHEN> | 23:05 |
 | d2 | Kiro user id | ✅ verified (Web account, see `log/private.md`) | `app.kiro.dev/settings/account` | 21:46 |
 | d3 | Credits form submitted | ✅ **submitted** — "您的回复已记录。" | [confirmation](docs/images/credits-submitted.png) | 23:15 |
-| d4 | Credits redeemed | **PENDING** — user must complete Didit (ID + face), then the code arrives by email | — | — |
+| d4 | Credits redeemed | **PENDING** — the Didit invitation has **not arrived** as of 2026-11-02 00:45 (form submitted 23:15; Devpost reviews before sending it). Watch the inbox + spam; escalate after 2 business days. | — | — |
 | d5 | `.kiro` artifact | ✅ | [.kiro](.kiro) | 21:5x |
 | d6 | GitHub repo URL | ✅ public, MIT detected in About | <https://github.com/RomainCHEN/seance> | 22:28 |
 | d7 | Working app URL | ✅ live, no login, zero network calls | <https://romain.is-a.dev/seance/> | 22:29 |
@@ -33,7 +33,7 @@ Last updated: 2026-11-02 00:34 (Asia/Shanghai)
 | d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
 | d10 | Blog URL | ✅ **published** on dev.to (contains the required Kiroween sentence) | <https://dev.to/zaamchan/multi-agent-demos-you-can-actually-reproduce-1b6> | 00:30 |
 | d11 | Social post URL | ✅ **posted** — starts with #KiroweenHackathon26, 267 chars | <https://x.com/Zaam1035028/status/2116929560566743420> | 00:32 |
-| d12 | Devpost submission URL | ✅ **SUBMITTED, 5/5 steps**, bonus URLs saved | <https://devpost.com/software/seance-0beln7> · [manage](https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions) | 00:34 |
+| d12 | Devpost submission URL | ✅ **SUBMITTED, 5/5 steps** — Devpost confirmation email “Submission confirmed: Séance” received 2026-11-02 00:23 | <https://devpost.com/software/seance-0beln7> · [manage](https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions) | 00:34 |
 | d13 | Step log | ✅ | [log/steps.md](log/steps.md) | 22:2x |
 | d14 | This file | ✅ (live) | `SUBMITTED.md` | — |
 
