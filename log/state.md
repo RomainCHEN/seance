@@ -81,3 +81,19 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 过程中 Orca 的 AX 一度读不到 Brave 窗口（windows: []）；用
   `osascript -e 'tell application "Brave Browser" to activate'` 恢复。
   已把该重试逻辑写进 scripts/browser.sh。
+
+## 2026-11-01 22:08 进展（第三轮）
+- **Kiro CLI 已登录**：`kiro-cli whoami` → `Logged in with Builder ID， Email: oct19@z-chen.dev`
+  ⚠️ 与 Kiro Web 的 `nov1@z-chen.dev` **不是同一个账号**。积分表要填"实际用来构建的账号"的 User ID，
+  需要用户决定：把 4000 积分给 oct19（CLI 构建）还是 nov1（Web/新账号）。
+  另外：kiro-cli 的凭据在 workspace 之外，必须用 full-access 才能调用，
+  workspace-write 下会报 `not logged in` 或 `Operation not permitted (os error 1)`。
+- **Kiro CLI 审计已跑通**：`kiro-cli chat --no-interactive --model auto --trust-tools=fs_read`
+  - 默认模型 `claude-opus-5` 不可用 → 必须用 `--model auto`
+  - 输出存 `docs/kiro-cli-audit.log`：R1–R12 逐条 PASS/FAIL + 3 条缺陷
+  - 已修 2 条：`speak()` 静默回退（新增 `requirePhrases`）、`scoring.yaml` 接线无证据（补 3 条测试）
+  - 测试从 27 → **32 全部通过**；typecheck 通过（新增 @types/node）
+- **浏览器状态变化**：Brave 的 Devpost/Kiro/演示 tab 被关掉了（疑似浏览器重启），
+  且前台被 **网易UU远程（Windows 远程桌面）** 占据，`screencapture` 截到的是远程桌面画面，
+  不是 Brave。→ GUI 截图前必须先 `osascript activate Brave`，并且不要在用户用远程桌面时抢前台。
+- Devpost 是否已登录：**未确认**（页面内容节点为空，无法读取）。

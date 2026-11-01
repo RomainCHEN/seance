@@ -29,6 +29,12 @@ memory without a tool result backing them.
 | 22 | 21:59 | localhost:5199 | Postmortem app screenshot | `docs/images/postmortem-verdict.png` — verdict **81/100 · Blocked**, 5 risk / 5 warn / 3 note |
 | 23 | 22:00 | local | `npm run build` (all) | Three entry points in `dist/`; `scripts/build-site.mjs` verified them |
 | 24 | 22:01 | local | `git init` + first commit `8267b71` | 74 files, 27 tests, pages workflow |
+| 25 | 22:02 | local | `kiro-cli login` (device flow) | Reported "Logged in successfully" but the token write failed: `Operation not permitted (os error 1)` under the workspace sandbox |
+| 26 | 22:03 | local | Re-ran `kiro-cli login` with full file access | `Already logged in`; `kiro-cli whoami` → **Builder ID, oct19@z-chen.dev** |
+| 27 | 22:05 | local | `kiro-cli chat --no-interactive --model auto --trust-tools=fs_read "<R1-R12 audit>"` | Default model `claude-opus-5` unavailable → `--model auto` works; audit produced 11 PASS / 1 FAIL + 3 defects (`docs/kiro-cli-audit.log`) |
+| 28 | 22:06 | local | Fixed 2 audit findings | `requirePhrases()` validates phrase variants; `rooms.test.ts` now reads each `scoring.yaml` and runs the room through it |
+| 29 | 22:08 | local | `npx vitest run` / `npx tsc --noEmit` | **32 tests pass**, typecheck clean (added `@types/node`) |
+| 30 | 22:10 | browser | Tried to read Devpost tab | Tabs had been closed by a browser restart; the Mac screen was occupied by a UU Remote Windows session, so `screencapture` captured that instead. Devpost login state remains unverified. |
 
 ## Blocked / waiting on the user
 
