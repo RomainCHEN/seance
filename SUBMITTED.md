@@ -3,7 +3,7 @@
 **State: SUBMITTED.** Séance is entered in Kiroween 2026 (see Devpost “My projects → SUBMITTED”).
 Remaining rows are bonus prizes or the credit redemption, each marked with the reason.
 
-Last updated: 2026-11-02 00:25 (Asia/Shanghai)
+Last updated: 2026-11-02 00:34 (Asia/Shanghai)
 
 ## Project
 
@@ -31,9 +31,9 @@ Last updated: 2026-11-02 00:25 (Asia/Shanghai)
 | d7 | Working app URL | ✅ live, no login, zero network calls | <https://romain.is-a.dev/seance/> | 22:29 |
 | d8 | YouTube video | ✅ **public**, 1:30 (limit 3:00) | <https://youtu.be/JEslV2u7YSw> | 23:55 |
 | d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
-| d10 | Blog URL | **PENDING** — platform chosen (dev.to); waiting for the user to log in, then the bot publishes | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
-| d11 | Social post URL | **COMPOSED, not posted** — 267 chars, waiting for CONFIRM; account is @Zaam1035028 | [screenshot](docs/images/x-composer.png) | 00:2x |
-| d12 | Devpost submission URL | ✅ **SUBMITTED** (Devpost shows the SUBMITTED badge) | <https://devpost.com/software/seance-0beln7> · [manage](https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions) | 00:23 |
+| d10 | Blog URL | ✅ **published** on dev.to (contains the required Kiroween sentence) | <https://dev.to/zaamchan/multi-agent-demos-you-can-actually-reproduce-1b6> | 00:30 |
+| d11 | Social post URL | ✅ **posted** — starts with #KiroweenHackathon26, 267 chars | <https://x.com/Zaam1035028/status/2116929560566743420> | 00:32 |
+| d12 | Devpost submission URL | ✅ **SUBMITTED, 5/5 steps**, bonus URLs saved | <https://devpost.com/software/seance-0beln7> · [manage](https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions) | 00:34 |
 | d13 | Step log | ✅ | [log/steps.md](log/steps.md) | 22:2x |
 | d14 | This file | ✅ (live) | `SUBMITTED.md` | — |
 
@@ -48,8 +48,8 @@ Last updated: 2026-11-02 00:25 (Asia/Shanghai)
 | Skeleton Crew: two separate app folders | ✅ `apps/code-seance/`, `apps/postmortem-seance/` |
 | Working app URL, no login needed for judges | ✅ <https://romain.is-a.dev/seance/> |
 | Video < 3 min, public on YouTube | ✅ 1:30, public (https://youtu.be/JEslV2u7YSw) |
-| Blog post mentions Kiroween 2026 | ✅ draft contains the exact required sentence |
-| Social post starts with `#KiroweenHackathon26` | ✅ drafts do |
+| Blog post mentions Kiroween 2026 | ✅ published, contains the exact sentence |
+| Social post starts with `#KiroweenHackathon26` | ✅ posted, starts with the tag |
 
 ## What is blocking, and on whom
 
@@ -58,5 +58,5 @@ Last updated: 2026-11-02 00:25 (Asia/Shanghai)
 | Kiro account choice for the credits form (`nov1` Web vs `oct19` CLI) | **user** | d3 |
 | Didit identity verification (ID + face) | **user** only — starts when the code email arrives | d4 |
 | Record + upload the video | **user** decides; bot can generate one from the page itself | d8 |
-| Log into dev.to (blog) and confirm the X post (@Zaam1035028) | **user** | d10, d11 |
+
 

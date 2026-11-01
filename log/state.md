@@ -167,3 +167,9 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   （Best Startup Project / Bonus Blog / Social Blitz）、2025 未参加、Individual、非 AWS 员工、
   技能问卷、创始人声明（LinkedIn + morphmind.ai）
 - 只剩：Blog URL、Social URL 两个字段 + 最终 `Submit project` 点击。
+
+## 2026-11-02 00:34 提交完成
+- Devpost：**SUBMITTED（5/5 steps）**，附加奖 URL 已保存
+- 博客：https://dev.to/zaamchan/multi-agent-demos-you-can-actually-reproduce-1b6（dev.to 账号 Zaam Chan）
+- 社交帖：https://x.com/Zaam1035028/status/2116929560566743420（以 #KiroweenHackathon26 开头）
+- 用户指示：积分到账后「清库」——见 docs/CLEANUP.md 第三阶段
