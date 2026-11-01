@@ -11,6 +11,7 @@
 | **Kiro spec files** (`.kiro/specs/agent-room/`) | Requirements → design → tasks, written before the code | `.kiro/specs/agent-room/{requirements,design,tasks}.md` |
 | **Kiro steering** (`.kiro/steering/`) | Always-on project memory for product, tech and structure | three files, `inclusion: always` |
 | **Kiro hooks** (`.kiro/hooks/`) | Run tests and typecheck on file save | `test-on-save.json`, `typecheck-on-save.json` |
+| **Custom agent** (`.kiro/agents/room-auditor.json`) | Read-only room auditor: checks personas against the spec, finds "dead lenses" that can never fire, verifies scoring.yaml | `docs/kiro-cli-room-auditor.log` — found 2 dead lenses, re-run after the fix returned PASS |
 | MCP / powers | not used | — |
 
 The repo keeps `/.kiro` at its root and it is explicitly **not** ignored — see the comment at the
@@ -86,6 +87,28 @@ before and after the fix, because the sample never produced the out-of-order cas
 
 PBT was the right tool here because the domain is a pure function over generated data: there is
 no network, no clock, no database — so a generated input is as valid as a hand-written one.
+
+## 5b. The custom agent (`room-auditor`)
+
+Kiro CLI picks up project-local agents from `.kiro/agents/`, so the audit is reproducible by
+anyone who clones the repo:
+
+```bash
+kiro-cli chat --agent room-auditor --no-interactive --model auto "Audit the repository now."
+```
+
+The agent is deliberately constrained: `tools: [fs_read, grep, glob, thinking]` and a prompt that
+says **read-only, never invent a file or line, end with PASS or FAIL**. That constraint is what
+makes its output usable as evidence rather than as another opinion.
+
+It found something no test could: a **dead lens**. `style-wraith` had a `naming` lens looking for
+`tmp`, `data2`, `copy`, `var ` — and the sample artifact contained none of them, so that reviewer
+had a lens that could never fire and the demo silently showed two lenses instead of three. The
+template had the same problem with its `contradictions` lens.
+
+The fix was not to delete the lens but to make the sample *exercise* it — a real `const tmp =
+req.body.items` in the diff, and a `however` in the release notes. A second run returned PASS.
+Finding counts went from 14 to 15, and the verdict from 84 to 86 / Blocked.
 
 ## 6. What the Kiro CLI audit changed
 

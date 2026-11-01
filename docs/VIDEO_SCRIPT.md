@@ -13,7 +13,7 @@ python3 -m http.server 5199 --directory dist
 Open `http://127.0.0.1:5199/` at 1440×900, browser zoom 100%, hide the bookmarks bar, and close
 every other tab. Record at 1080p.
 
-Set the room seed to **7** so the transcript matches these notes (Code Séance: 84 / Blocked;
+Set the room seed to **7** so the transcript matches these notes (Code Séance: 86 / Blocked;
 Postmortem Séance: 81 / Blocked).
 
 ---
@@ -59,15 +59,16 @@ line count change.
 **Shot 4 (1:05):** scroll to the Perf Poltergeist and Style Wraith cards, slower.
 
 **Voice-over:**
-> "The Poltergeist counts wasted milliseconds — nested loops, a blocking `await` inside a loop.
-> The Wraith judges what the next reader inherits: a swallowed `catch`, a `console.log`, and a
-> `TODO` that outlived its author."
+> "The Poltergeist counts wasted milliseconds — nested loops, a blocking `await` in the middle of a
+> function. The Wraith judges what the next reader inherits: a swallowed `catch`, a `console.log`,
+> a `TODO` that outlived its author, and a `tmp` alias nobody needed."
+
 
 **Shot 5 (1:18):** scroll to the verdict panel.
 
 **Voice-over:**
-> "Then the room does the thing a chat log cannot: it aggregates. Fourteen findings become one
-> score — 84 out of 100 — and one decision: blocked."
+> "Then the room does the thing a chat log cannot: it aggregates. Fifteen findings become one
+> score — 86 out of 100 — and one decision: blocked."
 
 **Shot 6 (1:28):** click **Re-run with a new seed**.
 
