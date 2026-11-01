@@ -16,11 +16,13 @@ export function VerdictCard({ transcript }: VerdictCardProps): JSX.Element {
   const copy = DECISION_COPY[verdict.decision];
 
   return (
-    <section
-      className={`sn-verdict sn-verdict-${verdict.decision}`}
-      aria-live="polite"
-      aria-label={`Verdict: ${copy.label}, risk score ${verdict.score} out of 100`}
-    >
+    <section className={`sn-verdict sn-verdict-${verdict.decision}`}>
+      {/* Announce the change from inside the region: a static aria-label on the section is
+          never re-read when the score updates. */}
+      <p className="sn-sr-only" aria-live="polite">
+        Verdict: {copy.label}. Risk score {verdict.score} out of 100, {verdict.counts.risk} hard
+        risks.
+      </p>
       <div className="sn-verdict-score">
         <span className="sn-score">{verdict.score}</span>
         <span className="sn-score-unit">/100 risk</span>

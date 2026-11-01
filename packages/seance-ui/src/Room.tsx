@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Persona, Scoring, Transcript } from '@seance/core';
-import { decodeRoomState, roomFragment, runRoom } from '@seance/core';
+import { MAX_SHARED_ARTIFACT, decodeRoomState, nextSeed, roomFragment, runRoom } from '@seance/core';
 import { AgentCard } from './components/AgentCard.js';
 import { VerdictCard } from './components/VerdictCard.js';
 
@@ -126,6 +126,12 @@ export function Room({
           rows={10}
         />
         {artifactHint ? <p className="sn-hint">{artifactHint}</p> : null}
+        {draft.length > MAX_SHARED_ARTIFACT ? (
+          <p className="sn-hint sn-hint-warn">
+            This artifact is longer than {MAX_SHARED_ARTIFACT.toLocaleString()} characters — a room
+            link will carry only the first {MAX_SHARED_ARTIFACT.toLocaleString()}.
+          </p>
+        ) : null}
 
         <div className="sn-controls">
           <label className="sn-seed">
@@ -135,13 +141,16 @@ export function Room({
               min={0}
               max={999999}
               value={seed}
-              onChange={(event) => setSeed(Number.parseInt(event.target.value, 10) || 0)}
+              onChange={(event) => {
+                const parsed = Number.parseInt(event.target.value, 10);
+                if (Number.isFinite(parsed)) setSeed(Math.max(0, Math.min(999_999, parsed)));
+              }}
             />
           </label>
           <button
             type="button"
             className="sn-button"
-            onClick={() => setSeed((current) => (current + 1 + Math.floor(Math.random() * 997)) % 1_000_000)}
+            onClick={() => setSeed((current) => nextSeed(current))}
           >
             Re-run with a new seed
           </button>
@@ -166,7 +175,7 @@ export function Room({
             <h2 className="sn-section-title">The room speaks</h2>
             <ol className="sn-turns">
               {transcript.turns.map((turn) => (
-                <li key={turn.personaId}>
+                <li key={turn.index}>
                   <AgentCard turn={turn} />
                 </li>
               ))}

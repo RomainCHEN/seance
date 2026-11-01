@@ -148,6 +148,10 @@
   font-size: 0.82rem;
 }
 
+.sn-hint-warn {
+  color: #f3c96b;
+}
+
 .sn-controls {
   display: flex;
   flex-wrap: wrap;
