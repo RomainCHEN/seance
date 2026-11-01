@@ -44,3 +44,7 @@ log/private.md
 
 # gh-pages deploy worktree
 .pages-build/
+
+# CDP automation profile (clone of the user Brave profile)
+.brave-auto/
+.npm-cache2/
