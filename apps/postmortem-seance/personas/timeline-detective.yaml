@@ -1,0 +1,34 @@
+id: timeline-detective
+name: The Timeline Detective
+role: Reconstructs what actually happened, minute by minute
+order: 1
+voice: forensic, unhurried
+lenses:
+  - id: unanswered
+    label: Unanswered questions
+    severity: warn
+    keywords:
+      - TBD
+      - unknown
+      - presumed
+      - assumed
+      - not sure
+  - id: detection-gap
+    label: Detection gaps
+    severity: risk
+    keywords:
+      - No dashboard
+      - no alert
+      - manual
+      - after 20 minutes
+  - id: ownership
+    label: Unowned follow-up
+    severity: info
+    keywords:
+      - Someone
+      - nobody
+      - unassigned
+phrases:
+  none: The timeline holds together. Every minute is accounted for. | Clean sequence. I have nothing to reconstruct.
+  some: '{hits} loose thread(s) in this story. | I can pull on {hits} thread(s) here.'
+  many: '{hits} loose threads. This timeline was written by someone who wanted it to end. | {hits} threads. The story does not close.'

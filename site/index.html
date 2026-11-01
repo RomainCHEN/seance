@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Séance — deterministic multi-agent rooms</title>
+    <meta
+      name="description"
+      content="An open-source template for multi-agent review rooms: declarative personas, a pure engine, and a reusable UI. Built for Kiroween 2026."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>🕯️</text></svg>" />
+    <style>
+      :root {
+        --bg: #0b0a12;
+        --text: #ece9f5;
+        --muted: #a7a2bd;
+        --line: rgba(255, 255, 255, 0.1);
+        --panel: rgba(255, 255, 255, 0.045);
+        --violet: #a78bfa;
+        --teal: #58d3c7;
+        --amber: #e8b339;
+        --serif: ui-serif, Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+        --sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        padding: clamp(2rem, 6vw, 5rem) clamp(1.25rem, 5vw, 3rem);
+        background:
+          radial-gradient(120% 80% at 10% -10%, rgba(167, 139, 250, 0.2), transparent 60%),
+          radial-gradient(90% 70% at 105% 0%, rgba(232, 179, 57, 0.14), transparent 55%),
+          var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      main { max-width: 60rem; margin: 0 auto; }
+
+      .eyebrow {
+        margin: 0 0 0.5rem;
+        color: var(--violet);
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(2.4rem, 7vw, 4rem);
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+      }
+
+      .lede {
+        max-width: 44rem;
+        margin: 1.1rem 0 0;
+        color: var(--muted);
+        font-size: clamp(1rem, 1.6vw, 1.15rem);
+      }
+
+      .pill {
+        display: inline-block;
+        margin-top: 1.4rem;
+        padding: 0.3rem 0.8rem;
+        border: 1px solid rgba(88, 211, 199, 0.35);
+        border-radius: 999px;
+        background: rgba(88, 211, 199, 0.08);
+        color: var(--teal);
+        font-size: 0.78rem;
+      }
+
+      .rooms {
+        display: grid;
+        gap: 1rem;
+        margin: clamp(2rem, 5vw, 3.5rem) 0 0;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      }
+
+      .room {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 1.4rem;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), var(--panel));
+        color: inherit;
+        text-decoration: none;
+        transition: border-color 140ms ease, transform 140ms ease, background 140ms ease;
+      }
+
+      .room:hover {
+        border-color: rgba(167, 139, 250, 0.55);
+        background: linear-gradient(180deg, rgba(167, 139, 250, 0.16), var(--panel));
+        transform: translateY(-2px);
+      }
+
+      .room h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+
+      .room p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+      .room .go {
+        margin-top: 0.6rem;
+        color: var(--teal);
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      section.how {
+        margin-top: clamp(2.5rem, 6vw, 4rem);
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--line);
+      }
+
+      h3 {
+        margin: 0 0 0.75rem;
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      ol { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+      ol li { margin-bottom: 0.35rem; }
+      code {
+        padding: 0.1rem 0.35rem;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.4);
+        color: var(--text);
+        font-family: var(--mono);
+        font-size: 0.85em;
+      }
+
+      footer {
+        margin-top: clamp(2.5rem, 6vw, 4rem);
+        padding-top: 1.25rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      footer a { color: var(--teal); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Séance · Kiroween 2026</p>
+      <h1>Multi-agent rooms you can actually reproduce.</h1>
+      <p class="lede">
+        Séance is a template for the part of multi-agent apps nobody wants to rewrite: personas in
+        YAML, a pure seeded engine that turns an artifact into a transcript, and a room UI that
+        renders any transcript. No API key, no network call, same input → same output, every time.
+      </p>
+      <p class="pill">Open source · MIT · deterministic demo mode</p>
+
+      <ul class="rooms">
+        <li>
+          <a class="room" href="./apps/code-seance/">
+            <h2>Code Séance</h2>
+            <p>Three reviewers read a diff and return a merge verdict: what lets a stranger in, what wastes time, what the next reader inherits.</p>
+            <span class="go">Open the room →</span>
+          </a>
+        </li>
+        <li>
+          <a class="room" href="./apps/postmortem-seance/">
+            <h2>Postmortem Séance</h2>
+            <p>A detective, a blast analyst and a process ghost read an incident timeline and return a root-cause verdict.</p>
+            <span class="go">Open the room →</span>
+          </a>
+        </li>
+        <li>
+          <a class="room" href="./template/">
+            <h2>The template</h2>
+            <p>One persona, one page, zero app code. Copy the folder, swap the YAML, ship a new room.</p>
+            <span class="go">Open the skeleton →</span>
+          </a>
+        </li>
+      </ul>
+
+      <section class="how">
+        <h3>Make your own room in three steps</h3>
+        <ol>
+          <li><code>cp -r template apps/my-room</code></li>
+          <li>Write <code>apps/my-room/personas/*.yaml</code> — id, name, role, order, voice, lenses, phrases.</li>
+          <li><code>npm run dev -w apps/my-room</code></li>
+        </ol>
+        <p class="lede" style="font-size: 0.92rem; margin-top: 1rem">
+          Everything the engine needs is data. If a new room requires editing
+          <code>@seance/core</code>, the template has a bug — fix the template, not the app.
+        </p>
+      </section>
+
+      <footer>
+        Built for the <a href="https://kiroween.devpost.com/">Kiroween 2026</a> hackathon, Skeleton
+        Crew category. Source on
+        <a href="https://github.com/JieGroup/seance">GitHub</a>. MIT licensed.
+      </footer>
+    </main>
+  </body>
+</html>

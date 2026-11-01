@@ -1,0 +1,32 @@
+{
+  "name": "seance",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A template for building deterministic multi-agent review rooms.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "template",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev:code": "npm run dev -w apps/code-seance",
+    "dev:postmortem": "npm run dev -w apps/postmortem-seance",
+    "build": "npm run build -w apps/code-seance && npm run build -w apps/postmortem-seance && npm run build:site",
+    "build:site": "node scripts/build-site.mjs"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "fast-check": "^3.23.2",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  }
+}

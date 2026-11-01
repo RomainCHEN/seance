@@ -1,0 +1,34 @@
+id: blast-analyst
+name: The Blast Analyst
+role: Counts what it cost and who paid
+order: 2
+voice: blunt, numerate
+lenses:
+  - id: customers
+    label: Customer harm
+    severity: risk
+    keywords:
+      - users
+      - duplicate charges
+      - lost orders
+      - timeout
+  - id: money
+    label: Money left on the table
+    severity: risk
+    keywords:
+      - revenue
+      - $
+      - refund
+      - chargeback
+  - id: data
+    label: Data integrity
+    severity: warn
+    keywords:
+      - data integrity
+      - stale
+      - duplicate
+      - missing records
+phrases:
+  none: No customers touched. Nothing lost. | Clean. Nothing to bill.
+  some: '{hits} cost(s) on the record. | {hits} line item(s) I would not want on a slide.'
+  many: '{hits} costs. This is not an incident, it is an invoice. | {hits} costs. Somebody is paying for all of it.'

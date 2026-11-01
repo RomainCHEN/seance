@@ -1,0 +1,7 @@
+# Scoring for the template. Copy this file into your app and tune the weights;
+# the engine never hard-codes them.
+weights:
+  risk: 10
+  warn: 4
+  info: 1
+capacityPerPersona: 30

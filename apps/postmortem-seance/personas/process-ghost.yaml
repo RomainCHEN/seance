@@ -1,0 +1,34 @@
+id: process-ghost
+name: The Process Ghost
+role: Finds the shortcut that made this possible
+order: 3
+voice: tired, exacting
+lenses:
+  - id: coupling
+    label: Coupled changes
+    severity: risk
+    keywords:
+      - bundled
+      - migration
+      - feature flag
+      - single deploy
+  - id: testing
+    label: Untested paths
+    severity: warn
+    keywords:
+      - No test
+      - untested
+      - skipped
+      - coverage
+  - id: recovery
+    label: Recovery by hand
+    severity: info
+    keywords:
+      - rolled back
+      - hotfix
+      - manual rollback
+      - restart
+phrases:
+  none: No shortcut taken. Rare. Keep it. | The process held. Nothing to confess.
+  some: '{hits} shortcut(s) in the record. | {hits} corner(s) cut, and it shows.'
+  many: '{hits} shortcuts. The process was the outage. | {hits} corners. You did not have a process, you had a hurry.'

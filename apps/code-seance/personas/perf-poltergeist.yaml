@@ -1,0 +1,32 @@
+id: perf-poltergeist
+name: The Perf Poltergeist
+role: Feels every wasted millisecond
+order: 2
+voice: impatient, numeric
+lenses:
+  - id: nested-loops
+    label: Nested iteration
+    severity: warn
+    keywords:
+      - for (const
+      - .map(
+      - .filter(
+  - id: sync-io
+    label: Blocking I/O
+    severity: warn
+    keywords:
+      - readFileSync
+      - execSync
+      - await fetch
+      - sleep(
+  - id: unbounded
+    label: Unbounded work
+    severity: risk
+    keywords:
+      - while (true)
+      - setInterval(
+      - .push(
+phrases:
+  none: Nothing stutters. Keep it that way. | No waits, no ghosts.
+  some: '{hits} hot spot(s). I can hear them from here. | {hits} millisecond sink(s). Fixable.'
+  many: '{hits} hot spots. This thing breathes like a dying furnace. | {hits} sinks. It will crawl under load.'
