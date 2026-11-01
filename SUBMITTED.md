@@ -4,7 +4,7 @@
 `PENDING` with the reason. This file becomes the final deliverable once the Devpost form is
 submitted.
 
-Last updated: 2026-11-01 22:32 (Asia/Shanghai)
+Last updated: 2026-11-02 00:01 (Asia/Shanghai)
 
 ## Project
 
@@ -32,9 +32,9 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 | d7 | Working app URL | ✅ live, no login, zero network calls | <https://romain.is-a.dev/seance/> | 22:29 |
 | d8 | YouTube video | ✅ **public**, 1:30 (limit 3:00) | <https://youtu.be/JEslV2u7YSw> | 23:55 |
 | d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
-| d10 | Blog URL | **PENDING** — draft ready, platform not chosen | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
+| d10 | Blog URL | **PENDING** — platform chosen (dev.to); waiting for the user to log in, then the bot publishes | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
 | d11 | Social post URL | **PENDING** — account not confirmed (@Zaam1035028 vs @ProfJieDing) | [docs/SOCIAL_DRAFT.md](docs/SOCIAL_DRAFT.md) | — |
-| d12 | Devpost submission URL | **PENDING** — blocked by reCAPTCHA on *Start project* (human click) + needs the video URL | [paste pack](docs/DEVPOST-PASTE-PACK.md) | — |
+| d12 | Devpost submission URL | **PENDING** — only reCAPTCHA on *Start project* blocks it (human click); all field values + the video URL are in the paste pack | [paste pack](docs/DEVPOST-PASTE-PACK.md) | — |
 | d13 | Step log | ✅ | [log/steps.md](log/steps.md) | 22:2x |
 | d14 | This file | ✅ (live) | `SUBMITTED.md` | — |
 
