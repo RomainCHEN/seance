@@ -1,7 +1,0 @@
-# Scoring for Postmortem Séance — identical weights to the template default,
-# kept as a file so an app can diverge without touching the engine.
-weights:
-  risk: 10
-  warn: 4
-  info: 1
-capacityPerPersona: 30

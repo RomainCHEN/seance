@@ -1,7 +1,0 @@
-# Scoring for Code Séance.
-# risk=10, warn=4, note=1; one persona is "fully at risk" at 30 points.
-weights:
-  risk: 10
-  warn: 4
-  info: 1
-capacityPerPersona: 30
