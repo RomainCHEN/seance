@@ -25,8 +25,8 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 |---|---|---|---|---|
 | d1 | Devpost registration | ✅ registered ("Thanks for registering!") | <https://devpost.com/RomainCHEN> | 23:05 |
 | d2 | Kiro user id | ✅ verified (Web account, see `log/private.md`) | `app.kiro.dev/settings/account` | 21:46 |
-| d3 | Credits form submitted | **PENDING** — all 8 fields filled; blocked on the Didit consent checkbox (user's decision) + CONFIRM | [screenshot](docs/images/credits-form.png) | 23:10 |
-| d4 | Credits redeemed | **PENDING** — code arrives by email after Didit | — | — |
+| d3 | Credits form submitted | ✅ **submitted** — "您的回复已记录。" | [confirmation](docs/images/credits-submitted.png) | 23:15 |
+| d4 | Credits redeemed | **PENDING** — user must complete Didit (ID + face), then the code arrives by email | — | — |
 | d5 | `.kiro` artifact | ✅ | [.kiro](.kiro) | 21:5x |
 | d6 | GitHub repo URL | ✅ public, MIT detected in About | <https://github.com/RomainCHEN/seance> | 22:28 |
 | d7 | Working app URL | ✅ live, no login, zero network calls | <https://romain.is-a.dev/seance/> | 22:29 |
@@ -57,6 +57,6 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 | Blocker | Owner | Unblocks |
 |---|---|---|
 | Kiro account choice for the credits form (`nov1` Web vs `oct19` CLI) | **user** | d3 |
-| Didit identity check consent | **user** only | d3 (submit), d4 |
+| Didit identity verification (ID + face) | **user** only — starts when the code email arrives | d4 |
 | Record + upload the video | **user** (or bot if screen recording is allowed) | d8 |
 | Choose blog platform + X handle | **user** | d10, d11 |

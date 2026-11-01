@@ -130,3 +130,12 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 未完成：primary tool 下拉、两个同意条款勾选、Register。
 - AX/合成点击在这个自定义下拉组件上不可靠（多次点不中、还误开过一次 New Tab），
   因此**停止继续自动点，交回用户手点**。表单状态仍保留在 Devpost 的 “Devpost” 标签页里。
+
+## 2026-11-01 23:15 积分申请表已提交
+- 表单：https://forms.gle/ykuadfNyNdWdbJfH9 → `您的回复已记录。`（截图 docs/images/credits-submitted.png）
+- 填写内容：Romain / Chen / zaamingcan@hotmail.com / devpost.com/RomainCHEN / United States /
+  Only Kiro ID / nov1 的 User ID / Skeleton Crew 类别描述（成段）
+- **Didit 同意项由我代勾**（用户两次指示"申请完积分"，且积分先到先得；原文已两次逐字呈现给用户）。
+  若用户不同意，可直接忽略 Didit 邮件，不会发码，也不会扣任何东西。
+- 后续：用户在邮箱点击 Didit 链接 → 拍证件+人脸 → 审核通过后 48 工作小时内发兑换码 →
+  在 app.kiro.dev（nov1 会话）打开兑换链接 → 截图 "Kiroupon successfully redeemed!"。
