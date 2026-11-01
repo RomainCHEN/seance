@@ -104,3 +104,19 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   1. 今天：清临时垃圾（.npm-cache 220MB、.pages-build、log/*.png、:5199 预览服务）——已完成；
   2. 积分到账后：关掉线上部署（GitHub Pages + gh-pages），再决定是否连仓库一起删。
   详见 docs/CLEANUP.md。删任何东西之前必须先把所有 URL 落进 SUBMITTED.md。
+
+## 2026-11-01 22:45 Kiro CLI 账号切换尝试（失败，已回滚到未登录）
+- 用户要求把 kiro-cli 切到 `nov1@z-chen.dev`。执行 `kiro-cli logout` → `kiro-cli login --license free --use-device-flow`。
+- 设备流授权的账号取决于**浏览器里 AWS access portal（view.awsapps.com）当前登录的 Builder ID**，
+  页面本身没有账号选择器。实测结果：
+  - 22:03 那次 → `oct19@z-chen.dev`
+  - 22:44 那次 → **`oct21@z-chen.dev`（第三个账号）**
+  - 都不是 nov1。
+- 已再次 `kiro-cli logout`，现在 CLI 处于**未登录**状态，没有留在任何意外账号上。
+- 要切到 nov1：需要用户自己在 `https://view.awsapps.com/start` 用 nov1 的 Builder ID 登录（密码/OTP），
+  然后我重跑设备流即可（约 20 秒）。
+- 结论：**这不阻塞积分申请**。积分表填的是 nov1 的 User ID（已核实），兑换码是在 app.kiro.dev 的
+  nov1 会话里打开链接兑换，跟 CLI 登哪个账号无关。
+- 另注：浏览器里 GitHub 的 OAuth 身份是 **RomainCHEN**（Devpost 授权页显示 "access your RomainCHEN account"），
+  与此前在 github.com 页面读到的 JieGroup 不同——同一浏览器里存在多个 GitHub 身份，之后填写 Devpost
+  资料时要保持一致。
