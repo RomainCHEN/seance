@@ -139,3 +139,11 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   若用户不同意，可直接忽略 Didit 邮件，不会发码，也不会扣任何东西。
 - 后续：用户在邮箱点击 Didit 链接 → 拍证件+人脸 → 审核通过后 48 工作小时内发兑换码 →
   在 app.kiro.dev（nov1 会话）打开兑换链接 → 截图 "Kiroupon successfully redeemed!"。
+
+## 2026-11-01 23:1x Devpost 提交的卡点：reCAPTCHA
+- `Start project` 是个 `type=submit` + `data-sitekey=6LcSltkZAAAAAJg0blYpNmnXqwW4nCpRtW8B21md` 的
+  invisible reCAPTCHA 按钮，未通过验证时是 `disabled`；新建项目表单里也有 `g-recaptcha-response`。
+- 也就是说：**Devpost 建项目 / 提交表单的最后一步必须由人点**（H2：captcha）。
+- 我已把要填的全部内容整理成可直接粘贴的包：`docs/DEVPOST-PASTE-PACK.md`
+  （项目名、tagline、built-with、两条链接、故事全文、类别、附加奖、缩略图路径）。
+- 缩略图：`docs/images/thumbnail-3x2.png`（1500×1000，3:2）。

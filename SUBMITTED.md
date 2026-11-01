@@ -34,7 +34,7 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 | d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
 | d10 | Blog URL | **PENDING** — draft ready, platform not chosen | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
 | d11 | Social post URL | **PENDING** — account not confirmed (@Zaam1035028 vs @ProfJieDing) | [docs/SOCIAL_DRAFT.md](docs/SOCIAL_DRAFT.md) | — |
-| d12 | Devpost submission URL | **PENDING** — needs d1, d6, d7, d8 | — | — |
+| d12 | Devpost submission URL | **PENDING** — blocked by reCAPTCHA on *Start project* (human click) + needs the video URL | [paste pack](docs/DEVPOST-PASTE-PACK.md) | — |
 | d13 | Step log | ✅ | [log/steps.md](log/steps.md) | 22:2x |
 | d14 | This file | ✅ (live) | `SUBMITTED.md` | — |
 
@@ -58,5 +58,6 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 |---|---|---|
 | Kiro account choice for the credits form (`nov1` Web vs `oct19` CLI) | **user** | d3 |
 | Didit identity verification (ID + face) | **user** only — starts when the code email arrives | d4 |
-| Record + upload the video | **user** (or bot if screen recording is allowed) | d8 |
-| Choose blog platform + X handle | **user** | d10, d11 |
+| Record + upload the video | **user** decides; bot can generate one from the page itself | d8 |
+| Choose blog platform (dev.to/Hashnode are logged out) + confirm X handle | **user** | d10, d11 |
+| Click the reCAPTCHA on *Start project* | **user** | d12 |
