@@ -16,7 +16,8 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 | Bonus declined | Student (no enrolment evidence), Ghost of Kiroween Past (2025 participation unconfirmed) |
 | License | MIT (`LICENSE`, visible in the repo About panel) |
 | `.kiro` at root | ✅ `.kiro/{steering,specs,hooks}`, never gitignored |
-| Tests | 42 passing (10 property-based invariants) |
+| Tests | 45 passing (10 property-based invariants) |
+| Kiro surfaces | Kiro Web · Kiro CLI (2 spec audits) · custom agent `room-auditor` · steering · specs · hooks |
 
 ## Deliverables
 
@@ -30,7 +31,7 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 | d6 | GitHub repo URL | ✅ public, MIT detected in About | <https://github.com/RomainCHEN/seance> | 22:28 |
 | d7 | Working app URL | ✅ live, no login, zero network calls | <https://romain.is-a.dev/seance/> | 22:29 |
 | d8 | YouTube video | **PENDING** — needs recording + user upload | script: [docs/VIDEO_SCRIPT.md](docs/VIDEO_SCRIPT.md) | — |
-| d9 | `docs/KIRO_USAGE.md` | ✅ | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:0x |
+| d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
 | d10 | Blog URL | **PENDING** — draft ready, platform not chosen | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
 | d11 | Social post URL | **PENDING** — account not confirmed (@Zaam1035028 vs @ProfJieDing) | [docs/SOCIAL_DRAFT.md](docs/SOCIAL_DRAFT.md) | — |
 | d12 | Devpost submission URL | **PENDING** — needs d1, d6, d7, d8 | — | — |
@@ -41,7 +42,7 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 
 | Rule | Status |
 |---|---|
-| Built with Kiro (Web + CLI audit recorded) | ✅ `docs/kiro-cli-audit.log`, `docs/kiro-cli-audit-ui.log` |
+| Built with Kiro (Web + CLI audits + custom agent) | ✅ `docs/kiro-cli-audit.log`, `docs/kiro-cli-audit-ui.log`, `docs/kiro-cli-room-auditor.log` |
 | Kiro usage writeup | ✅ `docs/KIRO_USAGE.md` |
 | Public GitHub repo with license visible in About | ✅ MIT detected by GitHub |
 | `/.kiro` at repo root, not ignored | ✅ |
