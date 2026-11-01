@@ -34,3 +34,7 @@ log/screen-*.png
 
 # Kiro: DO NOT ignore .kiro — the hackathon rules require /.kiro at the repo root.
 # Adding ".kiro" or ".kiro/" here would disqualify the submission.
+
+# Local automation scratch
+.headless-profile/
+.headless-crashes/
