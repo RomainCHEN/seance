@@ -28,8 +28,8 @@ A skeleton template for deterministic multi-agent rooms — with two apps built 
 
 | Field | Value |
 |---|---|
-| Demo (public, no login) | ⟪https://jiegroup.github.io/seance/ — pending deploy⟫ |
-| Code repository | ⟪https://github.com/JieGroup/seance — pending push⟫ |
+| Demo (public, no login) | <https://romain.is-a.dev/seance/> |
+| Code repository | <https://github.com/RomainCHEN/seance> |
 | Video | ⟪YouTube URL — pending upload⟫ |
 | Judge testing credentials | none required — the site is public and makes no network calls |
 
@@ -127,6 +127,6 @@ the ones the spec had described but the code had not.
 
 ## "Try it out" links
 
-- Live demo: ⟪pending⟫
-- GitHub repo: ⟪pending⟫
+- Live demo: https://romain.is-a.dev/seance/
+- GitHub repo: https://github.com/RomainCHEN/seance
 - Video: ⟪pending⟫

@@ -5,13 +5,13 @@
 
 - Suggested title: **"Multi-agent demos you can actually reproduce"**
 - Tags: `ai`, `typescript`, `testing`, `opensource`
-- Canonical repo: https://github.com/JieGroup/seance
+- Canonical repo: https://github.com/RomainCHEN/seance
 
 ---
 
 This post was written as part of the Kiroween 2026 hackathon.
 
-I built [Séance](https://github.com/JieGroup/seance), a skeleton template for multi-agent "rooms" —
+I built [Séance](https://github.com/RomainCHEN/seance), a skeleton template for multi-agent "rooms" —
 and two apps from it. This is the part that would have been boring to write about: the personas and
 the UI. So instead I want to write about the bug that made the whole design worth it.
 
@@ -111,12 +111,12 @@ Two apps ship with the repo, and neither touches the engine:
 Different domains, same three layers. If a third use case needs an engine change, that is a template
 bug, not a feature request.
 
-Try it: **[demo link]**. No key, no login, no network calls — press *Re-run with a new seed* and
+Try it: **https://romain.is-a.dev/seance/**. No key, no login, no network calls — press *Re-run with a new seed* and
 watch the room change its voice without changing its evidence.
 
 ---
 
-*Source, tests and specs: [github.com/JieGroup/seance](https://github.com/JieGroup/seance). MIT.*
+*Source, tests and specs: [github.com/JieGroup/seance](https://github.com/RomainCHEN/seance). MIT.*
 
 ---
 
