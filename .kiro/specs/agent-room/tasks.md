@@ -36,6 +36,14 @@ Status legend: `[x]` done and verified · `[~]` done, needs polish · `[ ]` open
 - [x] 3.5 Offline-engine label in the header (R12)
 - [x] 3.6 Responsive layout under 34rem
 
+## 3b. Sharing
+
+- [x] 3b.1 `encodeRoomState` / `decodeRoomState` / `roomFragment` in core (base64url JSON)
+- [x] 3b.2 Property tests P8–P10 (round-trip, unicode, hostile input)
+- [x] 3b.3 Debounced `history.replaceState` keeps the URL shareable
+- [x] 3b.4 "Copy room link" button with clipboard fallback to a prompt
+- [x] 3b.5 A shared fragment overrides the app defaults on first load only
+
 ## 4. Apps
 
 - [x] 4.1 `template/` — one persona, one page, zero app code

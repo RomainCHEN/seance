@@ -42,6 +42,13 @@ can be produced from one template, and so that a room is reproducible byte-for-b
 - **R9** — WHEN the artifact is empty or whitespace-only, THE System SHALL refuse to run and
   SHALL return a `ValidationError` instead of a room.
 
+### Sharing
+
+- **R13** — WHEN a room is edited, THE System SHALL keep the address bar's fragment in sync with
+  `(artifact, seed)` so the page can be shared as a link.
+- **R14** — WHEN a page is opened with a fragment produced by R13, THE System SHALL seed the room
+  from it, and SHALL fall back to the app's own defaults when the fragment is absent or invalid.
+
 ### Shell
 
 - **R10** — WHEN a transcript is rendered, THE System SHALL show every turn, the persona name,
@@ -64,6 +71,10 @@ These are the invariants handed to `fast-check` (see `*.property.test.ts`).
   size 1..8.
 - **P6 (no mutation)** — running the engine twice with the same persona array does not mutate
   the input array or its elements.
+- **P7 (ordering)** — persona order is identical for any permutation of the input array.
+- **P8 (share round-trip)** — `decodeRoomState(encodeRoomState(x)) === x` for any artifact/seed.
+- **P9 (unicode)** — the round-trip holds for arbitrary unicode, including control characters.
+- **P10 (hostile fragment)** — `decodeRoomState` never throws; unknown input returns `null`.
 
 ## Out of scope (v1)
 

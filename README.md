@@ -2,7 +2,7 @@
 
 **A skeleton template for deterministic multi-agent rooms — and two apps built from it.**
 
-[![tests](https://img.shields.io/badge/tests-27%20passing-brightgreen)](#tests)
+[![tests](https://img.shields.io/badge/tests-38%20passing-brightgreen)](#tests)
 [![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
 Séance is an open-source foundation for the part of multi-agent products nobody wants to
@@ -45,7 +45,7 @@ The payoff is a demo anyone can reproduce: **no key, no network, no tokens, same
 
 ```bash
 npm install
-npm test          # 27 unit + property tests
+npm test          # 38 unit + property tests
 npm run build     # builds both apps and the landing page into dist/
 npm run dev:code  # http://localhost:5173 — Code Séance
 ```
@@ -55,6 +55,14 @@ Open `dist/index.html` after a build to see the landing page, or run a local ser
 ```bash
 python3 -m http.server 5199 --directory dist
 ```
+
+## Share a room
+
+The address bar always carries the room: `#r=<base64url>` encodes the artifact and the seed.
+**Copy room link** puts a link on the clipboard, and opening it restores the exact same transcript
+on someone else's machine — no server, no account, no storage. Oversized artifacts are truncated
+to 4,000 characters rather than producing an unusable URL, and a malformed fragment falls back to
+the app's defaults instead of crashing.
 
 ## Make your own room
 
@@ -122,7 +130,7 @@ that score to `ship | revise | block` with fixed thresholds (30 / 70).
 
 ## Tests
 
-27 tests, including six property-based invariants run through `fast-check`:
+38 tests, including ten property-based invariants run through `fast-check`:
 
 | Property | Statement |
 |---|---|
@@ -132,6 +140,10 @@ that score to `ship | revise | block` with fixed thresholds (30 / 70).
 | P4 | every score maps to exactly one decision at the 29/30 and 69/70 boundaries |
 | P5 | one turn per persona, for any persona set of size 1..8 |
 | P6 | the engine never mutates the persona array it was given |
+| P7 | persona order is identical for any permutation of the input |
+| P8 | `decodeRoomState(encodeRoomState(x)) === x` |
+| P9 | the round-trip survives arbitrary unicode |
+| P10 | a hostile fragment returns `null` instead of throwing |
 
 Property-based testing earned its place here: P3 caught an early version of the scoring that
 divided by a capacity derived from the finding count, so adding a finding could *lower* the

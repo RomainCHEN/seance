@@ -1,6 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Persona, Scoring, Transcript } from '@seance/core';
-import { runRoom } from '@seance/core';
+import { decodeRoomState, roomFragment, runRoom } from '@seance/core';
 import { AgentCard } from './components/AgentCard.js';
 import { VerdictCard } from './components/VerdictCard.js';
 
@@ -23,6 +23,11 @@ export interface RoomProps {
   footer?: string;
 }
 
+function readSharedRoom(): { artifact: string; seed: number } | null {
+  if (typeof window === 'undefined') return null;
+  return decodeRoomState(window.location.hash);
+}
+
 /**
  * The whole product: artifact editor, seed control, transcript and verdict.
  * Everything is computed client-side; no network calls are made.
@@ -38,8 +43,12 @@ export function Room({
   initialSeed = 7,
   footer,
 }: RoomProps): JSX.Element {
-  const [draft, setDraft] = useState(sampleArtifact);
-  const [seed, setSeed] = useState(initialSeed);
+  // A shared link wins over the app's own defaults, but only on first load.
+  const shared = useMemo(readSharedRoom, []);
+  const [draft, setDraft] = useState(shared?.artifact ?? sampleArtifact);
+  const [seed, setSeed] = useState(shared?.seed ?? initialSeed);
+  const [copied, setCopied] = useState(false);
+  const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const result = useMemo((): { transcript: Transcript } | { error: string } => {
     try {
@@ -59,6 +68,32 @@ export function Room({
   const transcript = 'transcript' in result ? result.transcript : null;
   const error = 'error' in result ? result.error : null;
   const lineCount = draft.trim() === '' ? 0 : draft.split(/\r?\n/).length;
+
+  // Keep the address bar shareable, debounced so typing does not thrash history.
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.history?.replaceState !== 'function') return;
+    const timer = setTimeout(() => {
+      window.history.replaceState(null, '', roomFragment({ artifact: draft, seed }));
+    }, 400);
+    return () => clearTimeout(timer);
+  }, [draft, seed]);
+
+  useEffect(() => () => {
+    if (copyTimer.current) clearTimeout(copyTimer.current);
+  }, []);
+
+  const copyRoomLink = useCallback(async () => {
+    if (typeof window === 'undefined') return;
+    const url = `${window.location.origin}${window.location.pathname}${roomFragment({ artifact: draft, seed })}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      if (copyTimer.current) clearTimeout(copyTimer.current);
+      copyTimer.current = setTimeout(() => setCopied(false), 1800);
+    } catch {
+      window.prompt('Copy this room link', url);
+    }
+  }, [draft, seed]);
 
   return (
     <main className="sn-shell">
@@ -112,6 +147,9 @@ export function Room({
           </button>
           <button type="button" className="sn-button sn-button-ghost" onClick={() => setDraft(sampleArtifact)}>
             Reset artifact
+          </button>
+          <button type="button" className="sn-button sn-button-ghost" onClick={() => void copyRoomLink()}>
+            {copied ? 'Link copied' : 'Copy room link'}
           </button>
         </div>
       </section>
