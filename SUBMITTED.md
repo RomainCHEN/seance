@@ -1,10 +1,9 @@
 # Kiroween 2026 — submission status
 
-**State: IN PROGRESS — not submitted.** Every row is either verified with a link or marked
-`PENDING` with the reason. This file becomes the final deliverable once the Devpost form is
-submitted.
+**State: SUBMITTED.** Séance is entered in Kiroween 2026 (see Devpost “My projects → SUBMITTED”).
+Remaining rows are bonus prizes or the credit redemption, each marked with the reason.
 
-Last updated: 2026-11-02 00:15 (Asia/Shanghai)
+Last updated: 2026-11-02 00:25 (Asia/Shanghai)
 
 ## Project
 
@@ -34,7 +33,7 @@ Last updated: 2026-11-02 00:15 (Asia/Shanghai)
 | d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
 | d10 | Blog URL | **PENDING** — platform chosen (dev.to); waiting for the user to log in, then the bot publishes | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
 | d11 | Social post URL | **COMPOSED, not posted** — 267 chars, waiting for CONFIRM; account is @Zaam1035028 | [screenshot](docs/images/x-composer.png) | 00:2x |
-| d12 | Devpost submission URL | **DRAFT READY 4/5** — project created, every field filled; only the final `Submit project` click (and the two bonus URLs) remain | [draft](https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions/1277374-seance/finalization) · [project](https://devpost.com/software/seance-0beln7) | 00:15 |
+| d12 | Devpost submission URL | ✅ **SUBMITTED** (Devpost shows the SUBMITTED badge) | <https://devpost.com/software/seance-0beln7> · [manage](https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions) | 00:23 |
 | d13 | Step log | ✅ | [log/steps.md](log/steps.md) | 22:2x |
 | d14 | This file | ✅ (live) | `SUBMITTED.md` | — |
 
@@ -60,4 +59,4 @@ Last updated: 2026-11-02 00:15 (Asia/Shanghai)
 | Didit identity verification (ID + face) | **user** only — starts when the code email arrives | d4 |
 | Record + upload the video | **user** decides; bot can generate one from the page itself | d8 |
 | Log into dev.to (blog) and confirm the X post (@Zaam1035028) | **user** | d10, d11 |
-| Click `Submit project` on the final step (bot prepared the whole draft) | **user** | d12 |
+

@@ -81,3 +81,21 @@ Devpost submission is final, or (b) be followed by a replacement deploy.
 - `rm -rf .npm-cache` → 220 MB reclaimed
 - `rm -f log/*.png` → 19 MB → 464 KB
 - verified the live site still serves: `/seance/` and `/seance/apps/code-seance/` both **200**
+
+
+## Phase 3 — what to delete once the credit code arrives (user decision, 2026-11-02)
+
+> "A。做完然后积分到手之后清库。"
+
+After the credits land, tear down everything this session published:
+
+| Target | Command |
+|---|---|
+| Séance Pages site | `gh api -X DELETE repos/RomainCHEN/seance/pages` then `git push origin --delete gh-pages` |
+| Séance repo | `gh repo delete RomainCHEN/seance --yes` (capture every URL first — the Devpost entry points at it) |
+| Rulewright repo (built as an alternative, not submitted) | `gh repo delete RomainCHEN/rulewright --yes` |
+| Local scratch | `.npm-cache/`, `.pages-build/`, `.headless2/`, `.brave-auto/`, `frames/`, `video/*.mp4` |
+
+**Order matters**: the Devpost submission references the repo and demo URL, so decide whether to
+keep the entry (and its links) or delete it before removing the repo. If the repo goes, the entry
+stays but is untestable for judges.
