@@ -21,6 +21,8 @@ API key.
 Both apps are produced from `template/` without touching the engine. That is the Skeleton Crew
 claim: lean enough to read in one sitting, flexible enough to carry two different products.
 
+![Landing page](./docs/images/landing.png)
+
 ![Code Séance](./docs/images/code-seance-top.png)
 
 ![Verdict panel](./docs/images/code-seance-verdict.png)
