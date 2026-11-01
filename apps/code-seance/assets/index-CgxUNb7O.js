@@ -281,6 +281,7 @@ capacityPerPersona: 30
 export async function chargeUser(req: { body: any }) {
   const api_key = "sk-live-4f9c2b";            // TODO: move to env
   const price = req.body.price;
+  const tmp = req.body.items;                  // aliased, never cloned
 
   for (const item of req.body.items) {
     for (const discount of discounts) {
