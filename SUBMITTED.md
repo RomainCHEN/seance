@@ -33,7 +33,7 @@ Last updated: 2026-11-02 00:15 (Asia/Shanghai)
 | d8 | YouTube video | ✅ **public**, 1:30 (limit 3:00) | <https://youtu.be/JEslV2u7YSw> | 23:55 |
 | d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
 | d10 | Blog URL | **PENDING** — platform chosen (dev.to); waiting for the user to log in, then the bot publishes | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
-| d11 | Social post URL | **PENDING** — account not confirmed (@Zaam1035028 vs @ProfJieDing) | [docs/SOCIAL_DRAFT.md](docs/SOCIAL_DRAFT.md) | — |
+| d11 | Social post URL | **COMPOSED, not posted** — 267 chars, waiting for CONFIRM; account is @Zaam1035028 | [screenshot](docs/images/x-composer.png) | 00:2x |
 | d12 | Devpost submission URL | **DRAFT READY 4/5** — project created, every field filled; only the final `Submit project` click (and the two bonus URLs) remain | [draft](https://devpost.com/submit-to/31667-kiroween-2026/manage/submissions/1277374-seance/finalization) · [project](https://devpost.com/software/seance-0beln7) | 00:15 |
 | d13 | Step log | ✅ | [log/steps.md](log/steps.md) | 22:2x |
 | d14 | This file | ✅ (live) | `SUBMITTED.md` | — |
@@ -59,5 +59,5 @@ Last updated: 2026-11-02 00:15 (Asia/Shanghai)
 | Kiro account choice for the credits form (`nov1` Web vs `oct19` CLI) | **user** | d3 |
 | Didit identity verification (ID + face) | **user** only — starts when the code email arrives | d4 |
 | Record + upload the video | **user** decides; bot can generate one from the page itself | d8 |
-| Choose blog platform (dev.to/Hashnode are logged out) + confirm X handle | **user** | d10, d11 |
+| Log into dev.to (blog) and confirm the X post (@Zaam1035028) | **user** | d10, d11 |
 | Click `Submit project` on the final step (bot prepared the whole draft) | **user** | d12 |
