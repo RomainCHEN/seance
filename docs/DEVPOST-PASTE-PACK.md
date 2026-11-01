@@ -115,6 +115,40 @@ Transport implementations (OpenAI-compatible, Bedrock) behind the same Finding t
 be replayed offline and run live. Shareable rooms via location.hash. A persona linter.
 ```
 
+## 3b. "How did you use Kiro?" field (condensed, ~260 words)
+
+```
+Kiro Web + Kiro CLI + Kiro specs, steering and hooks.
+
+Surfaces: I signed into Kiro Web (app.kiro.dev) for the account and user ID. I used Kiro CLI
+(v2.32.0) as an independent auditor — `kiro-cli chat --no-interactive --model auto
+--trust-tools=fs_read` reads .kiro/specs/agent-room/requirements.md and reports PASS/FAIL per
+requirement with file:line citations. It found a silent fallback in speak() and that nothing in
+the core proved an app loads scoring.yaml; both are fixed and covered by tests.
+
+Custom agent: .kiro/agents/room-auditor.json is a read-only auditor (tools limited to
+fs_read/grep/glob/thinking) with a prompt that forbids inventing findings. It found two "dead
+lenses" — persona lenses whose keywords appeared nowhere in that room's sample artifact, so a
+reviewer silently had one fewer lens than the UI implied. Fixing the samples (a real `const tmp`
+alias, a `however`) turned them live; a second run returned PASS.
+
+Hooks: test-on-save and typecheck-on-save run on PostFileSave for .ts/.tsx.
+
+Spec-driven development: requirements.md holds 12 EARS statements plus six property invariants;
+design.md records the determinism boundary and the scoring formula; tasks.md carries 33 tasks. The
+property tests came from the spec, which is how property P3 caught a scoring formula that divided
+by the finding count — adding a risk finding could lower the score, and every unit test passed.
+
+Steering: three always-on files. The highest-leverage line was "no Math.random / Date.now / UUID
+inside seance-core" — it kept the engine pure across every file the agent touched.
+
+MCP and powers: not used. There is no external system in the demo path, and the rules judge
+effective use, not surface count.
+
+PBT: ten property invariants (determinism, score bounds, monotonicity, verdict totality, ordering,
+share-link round-trip) run over generated rooms.
+```
+
 ## 4. Hackathon submission form fields
 
 | Field | Value |
