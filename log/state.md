@@ -120,3 +120,13 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 另注：浏览器里 GitHub 的 OAuth 身份是 **RomainCHEN**（Devpost 授权页显示 "access your RomainCHEN account"），
   与此前在 github.com 页面读到的 JieGroup 不同——同一浏览器里存在多个 GitHub 身份，之后填写 Devpost
   资料时要保持一致。
+
+## 2026-11-01 23:0x Devpost 报名进度
+- **Devpost 账号已创建并登录**（GitHub OAuth 身份 = RomainCHEN，scope 仅 email:read-only）。
+- 已进入 `kiroween.devpost.com/register?...` 报名表单，已填：
+  Last name=Chen、Working solo、Who told you=Kiro、Kiro user ID=nov1 的 ID、
+  How much=Use it regularly、What interests=已成文。
+- 工具多选：Kiro CLI ✓、Kiro Web ✓，但**误加了 Kiro Crew 和 Kiro IDE**，需要用 chip 上的 × 去掉。
+- 未完成：primary tool 下拉、两个同意条款勾选、Register。
+- AX/合成点击在这个自定义下拉组件上不可靠（多次点不中、还误开过一次 New Tab），
+  因此**停止继续自动点，交回用户手点**。表单状态仍保留在 Devpost 的 “Devpost” 标签页里。
