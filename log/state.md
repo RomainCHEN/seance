@@ -12,14 +12,14 @@
 ## 账号（浏览器实测）
 | 平台 | 状态 | 账号 |
 |---|---|---|
-| Kiro (app.kiro.dev) | 已登录 | nov1@z-chen.dev，Signed in with **BuilderId** |
+| Kiro (app.kiro.dev) | 已登录 | nov1@***（见 log/private.md），Signed in with **BuilderId** |
 | GitHub | 已登录 | JieGroupJay（显示名 JieGroup Jay） |
-| Gmail | 已登录 | romain28chen@gmail.com |
+| Gmail | 已登录 | romain28***@gmail.com |
 | Devpost | **未登录** | 页头显示 Log in / Sign up |
 
 ## Kiro User ID
 ```
-d-9067642ac7.b4b86448-a0c1-7008-9450-8a1be005798a
+d-9067642ac7.****（全文见 log/private.md）
 ```
 来源：app.kiro.dev/settings/account → “Copy user ID to clipboard” → pbpaste。
 注意：工程书里的 `kiro.dev/account/usage` 是 404，正确入口是 **app.kiro.dev/settings/account**。
@@ -43,7 +43,7 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 说明**当前登录的 X 账号可能不是 @ProfJieDing**，发帖前需用户确认用哪个账号。
 
 ## 积分申请表（forms.gle/ykuadfNyNdWdbJfH9 → docs.google.com/forms/...）实测字段
-当前登录：romain28chen@gmail.com。表单语言为中文，按钮是「提交」。
+当前登录：romain28***@gmail.com。表单语言为中文，按钮是「提交」。
 必填项（与工程书一致，已核实）：
 1. First Name（短文本）
 2. Last Name（短文本）
@@ -83,8 +83,8 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   已把该重试逻辑写进 scripts/browser.sh。
 
 ## 2026-11-01 22:08 进展（第三轮）
-- **Kiro CLI 已登录**：`kiro-cli whoami` → `Logged in with Builder ID， Email: oct19@z-chen.dev`
-  ⚠️ 与 Kiro Web 的 `nov1@z-chen.dev` **不是同一个账号**。积分表要填"实际用来构建的账号"的 User ID，
+- **Kiro CLI 已登录**：`kiro-cli whoami` → `Logged in with Builder ID， Email: oct19@***（见 log/private.md）`
+  ⚠️ 与 Kiro Web 的 `nov1@***（见 log/private.md）` **不是同一个账号**。积分表要填"实际用来构建的账号"的 User ID，
   需要用户决定：把 4000 积分给 oct19（CLI 构建）还是 nov1（Web/新账号）。
   另外：kiro-cli 的凭据在 workspace 之外，必须用 full-access 才能调用，
   workspace-write 下会报 `not logged in` 或 `Operation not permitted (os error 1)`。

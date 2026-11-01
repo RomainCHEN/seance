@@ -10,8 +10,8 @@ memory without a tool result backing them.
 | 3 | 21:43 | local | `orca computer get-app-state` | **FAILED** `permission_denied` (accessibility) although `permissions` reported granted |
 | 4 | 21:44 | local | `screencapture` + read image | Desktop captured; Brave running with the DSH GUI in front |
 | 5 | 21:45 | local | killed Orca computer-use helper pid 38307, retried | AX recovered; window enumerable again |
-| 6 | 21:46 | app.kiro.dev | Navigated (new tab) | Landed on **Account Settings | Kiro Web**, signed in `nov1@z-chen.dev` (BuilderId) |
-| 7 | 21:46 | app.kiro.dev/settings/account | Clicked “Copy user ID to clipboard”, `pbpaste` | User ID `d-9067642ac7.b4b86448-a0c1-7008-9450-8a1be005798a` |
+| 6 | 21:46 | app.kiro.dev | Navigated (new tab) | Landed on **Account Settings | Kiro Web**, signed in `nov1@***` (BuilderId) |
+| 7 | 21:46 | app.kiro.dev/settings/account | Clicked “Copy user ID to clipboard”, `pbpaste` | User ID `d-9067642ac7.****` |
 | 8 | 21:47 | kiroween.devpost.com | Fetched `/rules` and `/resources` with curl + extracted text | 47 KB of official rules archived in `log/devpost-rules-clean.txt`; digest in `log/rules-digest.md` |
 | 9 | 21:47 | github.com | Opened profile | Signed in; username `JieGroup`, display name “Jay JieGroup”, Cofounder of MorphMind, Cambridge MA, morphmind.ai |
 | 10 | 21:48 | x.com | Opened `/home`, `/ProfJieDing` | X logged in (home timeline + Post composer). The profile page shows **Follow**, so the signed-in handle is probably not @ProfJieDing — needs user confirmation before posting |
@@ -30,7 +30,7 @@ memory without a tool result backing them.
 | 23 | 22:00 | local | `npm run build` (all) | Three entry points in `dist/`; `scripts/build-site.mjs` verified them |
 | 24 | 22:01 | local | `git init` + first commit `8267b71` | 74 files, 27 tests, pages workflow |
 | 25 | 22:02 | local | `kiro-cli login` (device flow) | Reported "Logged in successfully" but the token write failed: `Operation not permitted (os error 1)` under the workspace sandbox |
-| 26 | 22:03 | local | Re-ran `kiro-cli login` with full file access | `Already logged in`; `kiro-cli whoami` → **Builder ID, oct19@z-chen.dev** |
+| 26 | 22:03 | local | Re-ran `kiro-cli login` with full file access | `Already logged in`; `kiro-cli whoami` → **Builder ID, oct19@***** |
 | 27 | 22:05 | local | `kiro-cli chat --no-interactive --model auto --trust-tools=fs_read "<R1-R12 audit>"` | Default model `claude-opus-5` unavailable → `--model auto` works; audit produced 11 PASS / 1 FAIL + 3 defects (`docs/kiro-cli-audit.log`) |
 | 28 | 22:06 | local | Fixed 2 audit findings | `requirePhrases()` validates phrase variants; `rooms.test.ts` now reads each `scoring.yaml` and runs the room through it |
 | 29 | 22:08 | local | `npx vitest run` / `npx tsc --noEmit` | **32 tests pass**, typecheck clean (added `@types/node`) |
