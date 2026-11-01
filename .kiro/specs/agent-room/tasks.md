@@ -52,11 +52,18 @@ Status legend: `[x]` done and verified · `[~]` done, needs polish · `[ ]` open
 - [x] 4.4 Each app loads personas and scoring from YAML at build time (`?raw` + `parse`)
 - [x] 4.5 Landing page linking template + both apps
 
+## 4b. Scaffolding
+
+- [x] 4b.1 `scripts/new-room.mjs` — copy template, rename package, print the three files to edit
+- [x] 4b.2 Rejects invalid names and existing directories
+- [x] 4b.3 Integration test spawns the script into a temp dir
+
 ## 5. Build & deploy
 
 - [x] 5.1 npm workspaces, `npm run build` → `dist/` with three entry points
 - [x] 5.2 `scripts/build-site.mjs` verifies every entry point exists
-- [x] 5.3 GitHub Actions workflow: typecheck → test → build → Pages
+- [x] 5.3 Pages pipeline written and parked in `ci/deploy-pages.workflow.yml` (token scope)
+- [x] 5.5 `scripts/deploy-pages.sh` publishes `dist/` to the `gh-pages` branch
 - [x] 5.4 `npm run typecheck` passes with `strict` + `noUncheckedIndexedAccess`
 
 ## 6. Docs

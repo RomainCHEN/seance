@@ -2,7 +2,7 @@
 
 **A skeleton template for deterministic multi-agent rooms — and two apps built from it.**
 
-[![tests](https://img.shields.io/badge/tests-42%20passing-brightgreen)](#tests)
+[![tests](https://img.shields.io/badge/tests-45%20passing-brightgreen)](#tests)
 [![demo](https://img.shields.io/badge/demo-romain.is--a.dev%2Fseance-2ea44f)](https://romain.is-a.dev/seance/)
 [![license](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
@@ -48,7 +48,7 @@ The payoff is a demo anyone can reproduce: **no key, no network, no tokens, same
 
 ```bash
 npm install
-npm test          # 42 unit + property tests
+npm test          # 45 unit + property tests
 npm run build     # builds both apps and the landing page into dist/
 npm run dev:code  # http://localhost:5173 — Code Séance
 ```
@@ -69,10 +69,11 @@ the app's defaults instead of crashing.
 
 ## Make your own room
 
-1. Copy the skeleton:
+1. Scaffold from the template:
 
    ```bash
-   cp -r template apps/my-room
+   npm run new-room -- my-room
+   # or, without npm: cp -r template apps/my-room
    ```
 
 2. Write personas in `apps/my-room/personas/*.yaml`:
@@ -107,6 +108,16 @@ If a new room needs an edit to `packages/seance-core`, the template has a bug �
 not the app. `apps/*/personas` are validated against the schema by the test suite, so a broken
 persona fails CI rather than the browser.
 
+## Deploying
+
+```bash
+npm run deploy     # build + publish dist/ to the gh-pages branch
+```
+
+The Pages site is served from `gh-pages`; `.github/workflows` is intentionally empty because the
+first push token lacked the `workflow` scope — the ready-made pipeline lives in
+[`ci/deploy-pages.workflow.yml`](ci/deploy-pages.workflow.yml) with a two-line enable procedure.
+
 ## Architecture
 
 ```
@@ -133,7 +144,7 @@ that score to `ship | revise | block` with fixed thresholds (30 / 70).
 
 ## Tests
 
-42 tests, including ten property-based invariants run through `fast-check`:
+45 tests, including ten property-based invariants run through `fast-check`:
 
 | Property | Statement |
 |---|---|
