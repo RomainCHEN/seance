@@ -48,3 +48,10 @@ log/private.md
 # CDP automation profile (clone of the user Brave profile)
 .brave-auto/
 .npm-cache2/
+
+# captured demo video (local only; uploaded to YouTube)
+video/*.mp4
+frames/
+frames-test/
+.headless2/
+.venv/
