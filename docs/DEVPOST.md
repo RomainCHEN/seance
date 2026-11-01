@@ -30,7 +30,7 @@ A skeleton template for deterministic multi-agent rooms — with two apps built 
 |---|---|
 | Demo (public, no login) | <https://romain.is-a.dev/seance/> |
 | Code repository | <https://github.com/RomainCHEN/seance> |
-| Video | ⟪YouTube URL — pending upload⟫ |
+| Video | <https://youtu.be/JEslV2u7YSw> |
 | Judge testing credentials | none required — the site is public and makes no network calls |
 
 ## Short description (for the listing)
@@ -129,4 +129,4 @@ the ones the spec had described but the code had not.
 
 - Live demo: https://romain.is-a.dev/seance/
 - GitHub repo: https://github.com/RomainCHEN/seance
-- Video: ⟪pending⟫
+- Video: https://youtu.be/JEslV2u7YSw

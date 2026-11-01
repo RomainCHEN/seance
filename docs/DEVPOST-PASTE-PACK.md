@@ -122,7 +122,7 @@ be replayed offline and run live. Shareable rooms via location.hash. A persona l
 | Category | **Skeleton Crew** |
 | GitHub repository | `https://github.com/RomainCHEN/seance` |
 | "Try it out" URL | `https://romain.is-a.dev/seance/` |
-| Video | ⟪YouTube URL after upload⟫ |
+| Video | `https://youtu.be/JEslV2u7YSw` |
 | Login credentials for judges | none — public, no network calls |
 | Best Startup Project | ✅ founder — LinkedIn `https://www.linkedin.com/in/profjieding`, website `https://morphmind.ai` |
 | Bonus Blog | ⟪URL after publishing⟫ |

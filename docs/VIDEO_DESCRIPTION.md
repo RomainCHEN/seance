@@ -2,6 +2,8 @@
 
 **File:** `video/seance-demo.mp4` (89.5 s, 1440×900, H.264, silent)
 
+**Published:** https://youtu.be/JEslV2u7YSw — public, 1:30, channel “Romain Chen”
+
 **Title**
 
 ```

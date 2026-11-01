@@ -30,7 +30,7 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 | d5 | `.kiro` artifact | ✅ | [.kiro](.kiro) | 21:5x |
 | d6 | GitHub repo URL | ✅ public, MIT detected in About | <https://github.com/RomainCHEN/seance> | 22:28 |
 | d7 | Working app URL | ✅ live, no login, zero network calls | <https://romain.is-a.dev/seance/> | 22:29 |
-| d8 | YouTube video | **PENDING** — needs recording + user upload | script: [docs/VIDEO_SCRIPT.md](docs/VIDEO_SCRIPT.md) | — |
+| d8 | YouTube video | ✅ **public**, 1:30 (limit 3:00) | <https://youtu.be/JEslV2u7YSw> | 23:55 |
 | d9 | `docs/KIRO_USAGE.md` | ✅ (includes the custom agent and both audits) | [docs/KIRO_USAGE.md](docs/KIRO_USAGE.md) | 22:40 |
 | d10 | Blog URL | **PENDING** — draft ready, platform not chosen | [docs/BLOG_DRAFT.md](docs/BLOG_DRAFT.md) | — |
 | d11 | Social post URL | **PENDING** — account not confirmed (@Zaam1035028 vs @ProfJieDing) | [docs/SOCIAL_DRAFT.md](docs/SOCIAL_DRAFT.md) | — |
@@ -48,7 +48,7 @@ Last updated: 2026-11-01 22:32 (Asia/Shanghai)
 | `/.kiro` at repo root, not ignored | ✅ |
 | Skeleton Crew: two separate app folders | ✅ `apps/code-seance/`, `apps/postmortem-seance/` |
 | Working app URL, no login needed for judges | ✅ <https://romain.is-a.dev/seance/> |
-| Video < 3 min, public on YouTube | ⏳ after d8 |
+| Video < 3 min, public on YouTube | ✅ 1:30, public (https://youtu.be/JEslV2u7YSw) |
 | Blog post mentions Kiroween 2026 | ✅ draft contains the exact required sentence |
 | Social post starts with `#KiroweenHackathon26` | ✅ drafts do |
 
