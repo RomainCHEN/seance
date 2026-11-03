@@ -173,3 +173,11 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 博客：https://dev.to/zaamchan/multi-agent-demos-you-can-actually-reproduce-1b6（dev.to 账号 Zaam Chan）
 - 社交帖：https://x.com/Zaam1035028/status/2116929560566743420（以 #KiroweenHackathon26 开头）
 - 用户指示：积分到账后「清库」——见 docs/CLEANUP.md 第三阶段
+
+## 2026-11-03 14:30 积分状态复查
+- Kiro 用量页（app.kiro.dev/account/usage，nov1@z-chen.dev）：`0 used / 50`，**没有任何 kiroween 积分**
+  → 说明不是"码发了没兑换"，而是积分根本还没发。
+- Devpost：提交仍为 SUBMITTED，站内通知为空。
+- 邮箱最新三封依次是：Welcome to Devpost（11-01 22:43 风格）、Submission confirmed（11-02 00:23）、
+  Getting started with Devpost（11-02 22:43）——**没有 Didit 邀请**。
+- 已设 11-05 10:00 的催办提醒；草稿在 docs/ESCALATION_EMAIL.md。
