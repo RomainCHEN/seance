@@ -216,3 +216,12 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - **Devpost Discussions 表单已填好**（标题 + 968 字正文），但提交按钮旁是**可见 reCAPTCHA**（"I'm not a robot"）
   → 属于人工交接点，我停在这里，交给用户勾选提交。
   页面在自动化浏览器 `kiroween.devpost.com/forum_topics/new`；草稿同时在 docs/DISCUSSION_POST.md。
+
+## 2026-11-04 00:13 Discord 已发问（Kiro 官方服）
+- 自动化浏览器里 Discord 已登录（用户登录后共享到克隆 profile）；加入 kirodotdev 服务器，
+  走完 3 步 onboarding（Get help → 跳过 → 同意规则），频道 id `1422981799713308783`。
+- 在 **#kiroween-hackathon** 用账号 RoaminX 发出正式提问（00:13），内容含：提交时间、
+  Devpost 账号、Kiro user ID（脱敏）、项目链接、已勾 Didit 同意项、已联系 support 的经过、两个具体问题。
+- 事故与修复：第一次用 `keyboard.type` 带换行发送，被 Discord 当成 Enter 拆成 **8 条碎片消息**；
+  已逐条右键 → 删除信息 → 确认，全部删净，再以 Shift+Enter 换行重发为 1 条完整消息。
+- 频道里已有其他参与者问同样问题（"waiting for credit to start my project"、"did anyone get the credits?"）。
