@@ -189,3 +189,12 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   所以我无法代查邮箱，也无法代发催办邮件。
 - 时间换算：表单 11-01 23:15 CST = 11-01 08:15 PT；现在 11-03 05:07 PT ≈ **16 个工作时**，
   规则给的是「48 个工作小时」，**仍在窗口内**。催办定在 11-05。
+
+## 2026-11-03 20:1x 直接读邮箱（Outlook.app，zaamingcan@hotmail.com）
+- 用 computer-use 读 Microsoft Outlook 窗口，在邮箱内搜索 `didit`（All Results）：
+  **只命中一封** —— 用户今天 14:25 自己发出的催办邮件
+  「Kiroween 2026 — credits request submitted, no Didit invitation received」→ 收件人 support@devpost.com
+  （发件人显示为 Chen Zeming <zaamingcan@hotmail.com>，正文与 docs/ESCALATION_EMAIL.md 一致）。
+- **收件箱里没有任何 Didit 邀请**：最近的 Devpost 邮件仍是 11-01~11-02 的报名/提交/欢迎三封。
+- 结论：催办已发出约 6 小时，尚无回复；Kiro 侧积分仍为 0。
+- 备注：Orca.app 之前未运行导致 computer-use 不可用，`orca open --json` 恢复后可用。
