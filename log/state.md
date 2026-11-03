@@ -198,3 +198,15 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - **收件箱里没有任何 Didit 邀请**：最近的 Devpost 邮件仍是 11-01~11-02 的报名/提交/欢迎三封。
 - 结论：催办已发出约 6 小时，尚无回复；Kiro 侧积分仍为 0。
 - 备注：Orca.app 之前未运行导致 computer-use 不可用，`orca open --json` 恢复后可用。
+
+## 2026-11-03 22:40 Devpost Support 回复 + 官方口径确认
+- support@devpost.com 回信（22:34）：把我们指去 **Kiro Discord** 和 **Discussions 标签页**，
+  说 Kiro 团队更懂，Devpost 侧只能转问。
+- 我在 Discussions（`kiroween.devpost.com/forum_topics`）查到官方口径：
+  - FAQ 原文："We review requests and send credits within **48 business hours**."
+  - 管理员 Sara S（2 天前）："we review requests and send credits within 48 business hours, i.e.
+    **2 business days**."
+- 时间换算：表单 11-01 08:15 PT（周六）提交 → 工作时从 11-02（周一）开始算 → 48 工作时
+  ≈ 11-03（周二）PT 结束，即 **北京时间 11-04 下午**。
+- 论坛里至少 3 个同类帖子（45774 / 45778 / 45779），有人等 4 天，说明是**平台性延迟**，不是我们账号问题。
+- 已写好备用发帖草稿：docs/DISCUSSION_POST.md（仅在窗口过期后使用）。
