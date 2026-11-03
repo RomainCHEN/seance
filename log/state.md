@@ -210,3 +210,9 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   ≈ 11-03（周二）PT 结束，即 **北京时间 11-04 下午**。
 - 论坛里至少 3 个同类帖子（45774 / 45778 / 45779），有人等 4 天，说明是**平台性延迟**，不是我们账号问题。
 - 已写好备用发帖草稿：docs/DISCUSSION_POST.md（仅在窗口过期后使用）。
+
+## 2026-11-04 00:0x Discord / Discussions 发问尝试
+- **Discord 未登录**：discord.com 显示登录页（可用 QR code 扫码登录）。没有账号凭证我无法发帖。
+- **Devpost Discussions 表单已填好**（标题 + 968 字正文），但提交按钮旁是**可见 reCAPTCHA**（"I'm not a robot"）
+  → 属于人工交接点，我停在这里，交给用户勾选提交。
+  页面在自动化浏览器 `kiroween.devpost.com/forum_topics/new`；草稿同时在 docs/DISCUSSION_POST.md。
