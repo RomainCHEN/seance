@@ -181,3 +181,11 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 邮箱最新三封依次是：Welcome to Devpost（11-01 22:43 风格）、Submission confirmed（11-02 00:23）、
   Getting started with Devpost（11-02 22:43）——**没有 Didit 邀请**。
 - 已设 11-05 10:00 的催办提醒；草稿在 docs/ESCALATION_EMAIL.md。
+
+## 2026-11-03 20:07 积分复查（第二次）
+- Kiro 用量页仍为 `0 used / 50`，**无任何 kiroween 积分**（hasKiroween=false）。
+- Devpost 提交仍为 SUBMITTED（Participants 已到 7706）。
+- 自动化浏览器里 **Outlook 未登录**（跳到 MS 营销页）、**Gmail 停在账号选择页**（zaamingchan@gmail.com），
+  所以我无法代查邮箱，也无法代发催办邮件。
+- 时间换算：表单 11-01 23:15 CST = 11-01 08:15 PT；现在 11-03 05:07 PT ≈ **16 个工作时**，
+  规则给的是「48 个工作小时」，**仍在窗口内**。催办定在 11-05。
