@@ -225,3 +225,14 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 事故与修复：第一次用 `keyboard.type` 带换行发送，被 Discord 当成 Enter 拆成 **8 条碎片消息**；
   已逐条右键 → 删除信息 → 确认，全部删净，再以 Shift+Enter 换行重发为 1 条完整消息。
 - 频道里已有其他参与者问同样问题（"waiting for credit to start my project"、"did anyone get the credits?"）。
+
+## 2026-11-04 23:1x 进展复查
+- **Kiro 积分仍未到账**：`0 used / 50`，无 kiroween 积分。
+- **邮箱（Outlook，zaamingcan@hotmail.com）**：今天只有招生类邮件；Devpost Support 线程仍是 2 封
+  （我们发的催办 + 他们的回复）；**没有 Didit 邀请**。
+- **Discord #kiroween-hackathon**：
+  - 找到官方口径 —— **Sara (Devpost) 2026-10-31 05:39：**"credit distribution will begin on Monday!"
+  - 今天 20:15 Attila Ambrus (Kiro) 对同类提问的回复只有一句："Read the messages above."
+  - 频道里仍有多人在等：Monty（4 天前提交）、PennyWise01、SirenaMC（10-31 提交，也没有 Didit 验证）、PHUC LE
+  - 我的帖子（11-04 00:13）**没有直接回复**。
+- Devpost：提交仍为 SUBMITTED，参赛人数 8575，剩余 30 天；演示站 200。
