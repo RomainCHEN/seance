@@ -236,3 +236,15 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   - 频道里仍有多人在等：Monty（4 天前提交）、PennyWise01、SirenaMC（10-31 提交，也没有 Didit 验证）、PHUC LE
   - 我的帖子（11-04 00:13）**没有直接回复**。
 - Devpost：提交仍为 SUBMITTED，参赛人数 8575，剩余 30 天；演示站 200。
+
+## 2026-11-05 23:15 复查（提醒触发）
+- **Kiro 积分仍未到账**：`0 used / 50`，无 kiroween 积分。
+- **邮箱**：今天新增一封 Devpost「Build with Kiro live on November 11」网络研讨会通知；
+  **仍无 Didit 邀请**；support 线程仍是 2 封。
+- **Discord 关键证据**：Kiro 官方 Attila Ambrus 今天 01:26 明确说：
+  "There has been no change. **One or two people received it, but most people did not receive an email.**"
+  → 官方承认验证邮件大面积没发出（系统性积压，非个人问题）。
+- 同一频道今天仍有多个 10-30 / 10-31 / 11-01 / 11-02 提交者在等：Emily Du、SirenaMC、abhishek.tiwari13339、xianming、Monty。
+  另有一人 StuNNeR 在 21:35 说"i got mail of identity verification"，说明邮件确实在零星发出。
+- Devpost：提交仍为 SUBMITTED，参赛 9160 人，剩 29 天。
+- 结论：继续等，无需用户操作；credit request 截止 12-01，redeem 截止 12-04，时间仍充足。
