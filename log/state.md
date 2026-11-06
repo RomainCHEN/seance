@@ -248,3 +248,16 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   另有一人 StuNNeR 在 21:35 说"i got mail of identity verification"，说明邮件确实在零星发出。
 - Devpost：提交仍为 SUBMITTED，参赛 9160 人，剩 29 天。
 - 结论：继续等，无需用户操作；credit request 截止 12-01，redeem 截止 12-04，时间仍充足。
+
+## 2026-11-06 23:19 复查 + Discord 定向追问
+- Kiro 积分仍为 `0 used / 50`，无 kiroween 积分；邮箱今天只有招生邮件，**无 Didit、无 support 回复**。
+- Discord 情报（今天）：
+  - Rahul（Nov 1 提交）：Nov 5 用完 50 初始积分 → **几小时后收到验证邮件** → 已完成验证，等发码。
+  - Codessa：收到验证邮件 → 上传证件+自拍 → 已兑换成功。
+  - Alvaro：*"I just got rejected from the kiroween credits"* → 存在被拒的情况。
+  - iolaire [Kiro]（Nov 5 21:25）：*"So far I see the 30st and 1st only"* → 正在处理 10-30 与 11-01 两批。
+  - yuvrajr221（Nov 4 提交）：仍未收到。
+- 据此在 #kiroween-hackathon 发出定向追问（23:19）：说明我们是 Nov 1 申请、什么都没收到，
+  问能否确认"已收到 / 仍在队列 / 已被拒"。
+- 待验证假设：Rahul 是"用完额度后"才收到验证邮件；我们的账号是 0 使用。可能使用行为会触发审核，
+  但无证据，暂不擅自消耗用户额度。
