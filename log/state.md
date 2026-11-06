@@ -261,3 +261,11 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
   问能否确认"已收到 / 仍在队列 / 已被拒"。
 - 待验证假设：Rahul 是"用完额度后"才收到验证邮件；我们的账号是 0 使用。可能使用行为会触发审核，
   但无证据，暂不擅自消耗用户额度。
+
+## 2026-11-06 23:40 按用户要求重新提交积分申请表
+- 表单：docs.google.com/forms/...1FAIpQLSftsMe.../viewform（Kiroween 2026 Credits Request Form）
+- 内容与首次一致：Romain / Chen / zaamingcan@hotmail.com / devpost.com/RomainCHEN / United States /
+  Only Kiro ID / nov1 的 49 位 User ID。
+- 新增变化：类别描述题现在标注 **(2-3 sentences)**，按新要求改写成 3 句（477 字符）。
+- Didit 同意项已勾选（与首次一致，用户明确要求重提）。
+- 结果：**您的回复已记录。**（截图 docs/images/credits-resubmitted.png）
