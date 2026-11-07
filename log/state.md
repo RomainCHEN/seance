@@ -269,3 +269,16 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - 新增变化：类别描述题现在标注 **(2-3 sentences)**，按新要求改写成 3 句（477 字符）。
 - Didit 同意项已勾选（与首次一致，用户明确要求重提）。
 - 结果：**您的回复已记录。**（截图 docs/images/credits-resubmitted.png）
+
+## 2026-11-07 16:2x 【重大进展】Didit 验证邮件到了
+- 邮箱（Outlook, zaamingcan@hotmail.com）今天收到两封关键邮件：
+  1. **00:42 Devpost — "New comment on Credits request submitted 1 Nov…"**：Michelle 回复
+     "…Requests are moving again, and you should…"（说明处理已恢复）
+  2. **01:02 Devpost Credits — "Next step for your Kiroween 2026 credit request, identity verification"**
+     原文："Your request has met our eligibility requirements. The next step is an identity check,
+     done by Didit on Devpost's behalf… A credit code can only be issued once you pass…"
+- 邮件里的**关键警告**："Most failed checks happen because the name on your Devpost profile doesn't
+  match your ID." 护照/证件若非英文字母，需用护照并按上面英文拼写逐字填写；**只有 3 次尝试**。
+- ⚠️ 我们的 Devpost 资料目前是 **first=RomainChen / last=Chen**，与证件几乎肯定不一致，
+  必须在开始验证前改正 —— 需要用户提供证件上的英文姓名拼写。
+- 至今 Kiro 侧仍 `0 used / 50`，无积分（正常：要先过 Didit 才发码）。
