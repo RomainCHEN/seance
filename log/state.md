@@ -282,3 +282,13 @@ X（x.com）：已登录，可发帖；但 x.com/ProfJieDing 页面显示 “Fol
 - ⚠️ 我们的 Devpost 资料目前是 **first=RomainChen / last=Chen**，与证件几乎肯定不一致，
   必须在开始验证前改正 —— 需要用户提供证件上的英文姓名拼写。
 - 至今 Kiro 侧仍 `0 used / 50`，无积分（正常：要先过 Didit 才发码）。
+
+## 2026-11-07 16:40 已修正 Devpost 姓名并打开验证页
+- 用户确认证件英文名为 **ZEMING CHEN**。
+- Devpost 资料已改为 first=`ZEMING` / last=`CHEN`（用户名仍是 RomainCHEN），
+  个人页标题变为 "ZEMING CHEN's (RomainCHEN) software portfolio"。
+- 已在 Outlook 里点击邮件中的 "Complete your identity verification here"，在用户的主浏览器
+  打开了 Devpost 的 ID verification 页面；页面回读显示：
+  "FIRST NAME ZEMING  LAST NAME CHEN"，并提示用手机或带摄像头电脑 + 政府证件 + 良好光线，
+  只有 3 次尝试。
+- 接下来由用户本人完成自拍 + 证件照；通过后 48 工作小时内发兑换码。
